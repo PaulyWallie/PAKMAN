@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,9 +31,6 @@ public class PlayerController : MonoBehaviour
 
     public float inviaibiltyLength;
     private float invicibilityCounter;
-
-    public AudioSource jumpSound;
-    public AudioSource hurtSound;
 
     private bool onPlatform;
     public float onPlatformSpeedModifier;
@@ -92,7 +87,7 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetButtonDown("Jump") && isGrounded)
                 {
                     myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, jumpSpeed, 0);
-                    jumpSound.Play();
+                    
                 }
             }
 
@@ -143,13 +138,8 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "KillPlane")
-        {
-            // gameObject.SetActive(false);
-
-            // transform.position = respawnPosition;
-
+        { 
             theLevelManager.Respawn();
-            //theLevelManager.healthCount = 0;
         }
         if (other.tag == "Checkpoint")
         {

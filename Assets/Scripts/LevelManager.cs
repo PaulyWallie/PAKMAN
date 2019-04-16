@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +12,6 @@ public class LevelManager : MonoBehaviour
     public int coinCount;
     private int coinBonusLifeCount;
     public int bonsusLifeThresehold;
-
-    public AudioSource coinSound;
 
     public Text coinText;
 
@@ -40,10 +37,6 @@ public class LevelManager : MonoBehaviour
     public int currentLives;
 
     public GameObject gameOverScreen;
-
-    public AudioSource levelMusic;
-    public AudioSource GameOverMusic;
-    public AudioSource victory;
 
     public bool respawnCoActive;
 
@@ -106,18 +99,13 @@ public class LevelManager : MonoBehaviour
             {
                 thePlayer.gameObject.SetActive(false);
                 gameOverScreen.SetActive(true);
-                levelMusic.Stop();
-                GameOverMusic.Play();
-
-                //levelMusic.volume = levelMusic.volume / 2;
+                AudioManager.current.PlayGameoverMusic();
             }
-        }
-       
-        }
+        }   
+    }
     
     public IEnumerator RespawnCO()
     {
-
         respawnCoActive = true;
         thePlayer.gameObject.SetActive(false);
         Instantiate(deathSposion, thePlayer.transform.position, thePlayer.transform.rotation);
@@ -151,7 +139,7 @@ public class LevelManager : MonoBehaviour
 
         coinText.text = "Coins: " + coinCount;
 
-        coinSound.Play();
+        AudioManager.current.PlayCoinAudio();
     }
   
 
@@ -163,8 +151,6 @@ public class LevelManager : MonoBehaviour
             UpdateHeartMeter();
 
             thePlayer.Knockback();
-
-            thePlayer.hurtSound.Play();
         }
     }
         public void GiveHeath(int healthToGive)
@@ -176,7 +162,7 @@ public class LevelManager : MonoBehaviour
             healthCount = maxHealth;
         }
 
-        coinSound.Play();
+        
 
         UpdateHeartMeter();
     }
@@ -231,10 +217,8 @@ public class LevelManager : MonoBehaviour
         }
     public void AddLives(int LivesToGive)
     {
-        coinSound.Play();
         currentLives += LivesToGive;
         livesText.text = "Lives x " + currentLives;
-
     }
  }
 

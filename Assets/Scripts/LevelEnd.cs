@@ -15,8 +15,7 @@ public class LevelEnd : MonoBehaviour
     public float waitToLoad;
 
     private bool movePlayer;
-   
-
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -50,9 +49,7 @@ public class LevelEnd : MonoBehaviour
         theCamera.followTarget = false;
         theLevelManager.invinciable = true;
 
-        theLevelManager.levelMusic.Stop();
-        theLevelManager.victory.Play();
-
+        AudioManager.current.PlayVictoryMusic();
 
         thePlayer.myRigidBody.velocity = Vector3.zero;
 
@@ -68,7 +65,6 @@ public class LevelEnd : MonoBehaviour
         yield return new WaitForSeconds(waitToLoad);
 
         SceneManager.LoadScene(levelToLoad);
-
     }
 }
 

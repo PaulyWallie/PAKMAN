@@ -43,7 +43,6 @@ public class PauseScreen : MonoBehaviour
 
             thePauseScreen.SetActive(true);
             thePlayer.canMove = false;
-            theLevelManager.levelMusic.Pause();
     }
 
     public void ResumeGame()
@@ -52,7 +51,6 @@ public class PauseScreen : MonoBehaviour
 
         thePauseScreen.SetActive(false);
         thePlayer.canMove = true;
-        theLevelManager.levelMusic.Play();
     }
 
     public void LevelSelect()
