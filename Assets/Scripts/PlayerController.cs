@@ -112,6 +112,10 @@ public class PlayerController : MonoBehaviour
             {
                 theLevelManager.invinciable = false;
             }
+        if (transform.position.y < -9)
+        {
+            theLevelManager.Respawn();
+        }
 
 
             myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
@@ -137,10 +141,6 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "KillPlane")
-        { 
-            theLevelManager.Respawn();
-        }
         if (other.tag == "Checkpoint")
         {
             respawnPosition = other.transform.position;

@@ -9,6 +9,7 @@ TagManager:
   - MovingPlatform
   - Enemy
   - Boss
+  - SlimeBoss
   layers:
   - Default
   - TransparentFX

@@ -37,8 +37,7 @@ public class LevelEnd : MonoBehaviour
     {
         if (other.tag =="Player")
         {
-            //SceneManager.LoadScene(levelToLoad);
-
+            
             StartCoroutine("LevelEndCo");
         }
     }
@@ -46,7 +45,6 @@ public class LevelEnd : MonoBehaviour
     public IEnumerator LevelEndCo()
     {
         thePlayer.canMove = false;
-        theCamera.followTarget = false;
         theLevelManager.invinciable = true;
 
         AudioManager.current.PlayVictoryMusic();

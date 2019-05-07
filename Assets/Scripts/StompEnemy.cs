@@ -24,17 +24,17 @@ public class StompEnemy : MonoBehaviour
     {
         if (other.tag =="Enemy")
         {
-            //Destroy(other.gameObject);
             other.gameObject.SetActive(false);
 
             Instantiate(deathSplosion, other.transform.position, other.transform.rotation);
 
             playerRigidbody.velocity = new Vector3(playerRigidbody.transform.position.x, bounceForce, 0f);
         }
-        if (other.tag =="Boss")
+        if (other.tag =="SlimeBoss")
         {
             playerRigidbody.velocity = new Vector3(playerRigidbody.transform.position.x, bounceForce, 0f);
-            other.transform.parent.GetComponent<Boss>().takeDamge = true;
+            GetComponent<BossSlime>().TakeDamage();
+           
         }
     }
 }
