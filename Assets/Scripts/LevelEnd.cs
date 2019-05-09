@@ -8,7 +8,6 @@ public class LevelEnd : MonoBehaviour
     public string levelToUnlock;
 
     private PlayerController thePlayer;
-    private CameraController theCamera;
     private LevelManager theLevelManager;
 
     public float waitToMove;
@@ -20,7 +19,6 @@ public class LevelEnd : MonoBehaviour
     void Start()
     {
         thePlayer = FindObjectOfType<PlayerController>();
-        theCamera = FindObjectOfType<CameraController>();
         theLevelManager = FindObjectOfType<LevelManager>();
     }
 

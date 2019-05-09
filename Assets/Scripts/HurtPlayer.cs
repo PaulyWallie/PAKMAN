@@ -5,6 +5,7 @@ using UnityEngine;
 public class HurtPlayer : MonoBehaviour
 {
     private LevelManager theLevelManager;
+    private AudioManager audioManager;
 
     public int damageToGive;
 
@@ -12,20 +13,15 @@ public class HurtPlayer : MonoBehaviour
     void Start()
     {
         theLevelManager = FindObjectOfType<LevelManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            //theLevelManager.Respawn();
             theLevelManager.HurtPlayer(damageToGive);
+            audioManager.PlayHitHurtAudio();
         }
     }
 }

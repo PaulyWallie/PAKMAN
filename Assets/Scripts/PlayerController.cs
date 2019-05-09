@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove;
 
-    public Rigidbody2D myRigidBody;
 
     public float jumpSpeed;
 
@@ -18,13 +17,15 @@ public class PlayerController : MonoBehaviour
 
     public bool isGrounded;
 
+    public Rigidbody2D myRigidBody;
     private Animator myAnim;
+    private LevelManager theLevelManager;
+    private SlimeController slimeController;
+    private AudioManager audioManager;
 
-    public Vector3 respawnPosition;
+    public Vector2 respawnPosition;
 
-    public LevelManager theLevelManager;
-
-    public GameObject stompBox;
+   
     public float knockbackForce;
     public float knockbackLeagth;
     private float knockbackCounter;
@@ -35,6 +36,12 @@ public class PlayerController : MonoBehaviour
     private bool onPlatform;
     public float onPlatformSpeedModifier;
 
+    public int damageToGive;
+
+    public float bounceForce;
+
+    public GameObject deathSplosion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +50,8 @@ public class PlayerController : MonoBehaviour
         myAnim = GetComponent<Animator>();
 
         theLevelManager = FindObjectOfType <LevelManager>();
-
+        slimeController = FindObjectOfType<SlimeController>();
+        audioManager = FindObjectOfType<AudioManager>();
         respawnPosition = transform.position;
 
         activeMoveSpeed = moveSpeed;
@@ -69,68 +77,58 @@ public class PlayerController : MonoBehaviour
             }
 
 
-                if (Input.GetAxisRaw("Horizontal") > 0f)
-                {
-                    myRigidBody.velocity = new Vector3(activeMoveSpeed, myRigidBody.velocity.y, 0f);
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                else if (Input.GetAxisRaw("Horizontal") < 0f)
-                {
-                    myRigidBody.velocity = new Vector3(-activeMoveSpeed, myRigidBody.velocity.y, 0f);
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                }
-                else
-                {
-                    myRigidBody.velocity = new Vector3(0f, myRigidBody.velocity.y, 0f);
-                }
-
-                if (Input.GetButtonDown("Jump") && isGrounded)
-                {
-                    myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, jumpSpeed, 0);
-                    
-                }
+            if (Input.GetAxisRaw("Horizontal") > 0f)
+            {
+                myRigidBody.velocity = new Vector2(activeMoveSpeed, myRigidBody.velocity.y);
+                transform.localScale = new Vector2(1f, 1f);
+            }
+            else if (Input.GetAxisRaw("Horizontal") < 0f)
+            {
+                myRigidBody.velocity = new Vector2(-activeMoveSpeed, myRigidBody.velocity.y);
+                transform.localScale = new Vector2(-1f, 1f);
+            }
+            else
+            {
+                myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
             }
 
-            if (knockbackCounter > 0)
+            if (Input.GetButtonDown("Jump") && isGrounded)
             {
-                knockbackCounter -= Time.deltaTime;
-                if (transform.localScale.x > 0)
-                {
-                    myRigidBody.velocity = new Vector3(-knockbackForce, knockbackForce, 0f);
-                }
-                else
-                {
-                    myRigidBody.velocity = new Vector3(knockbackForce, knockbackForce, 0f);
-                }
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
+                audioManager.PlayJumpAudio();
             }
+        }
 
-            if (invicibilityCounter > 0)
+        if (knockbackCounter > 0)
+        {
+            knockbackCounter -= Time.deltaTime;
+            if (transform.localScale.x > 0)
             {
-                invicibilityCounter -= Time.deltaTime;
+                myRigidBody.velocity = new Vector2(-knockbackForce, knockbackForce);
             }
-            if (invicibilityCounter <= 0)
+            else
             {
-                theLevelManager.invinciable = false;
+                myRigidBody.velocity = new Vector2(knockbackForce, knockbackForce);
             }
+        }
+
+        if (invicibilityCounter > 0)
+        {
+            invicibilityCounter -= Time.deltaTime;
+        }
+        if (invicibilityCounter <= 0)
+        {
+            theLevelManager.invinciable = false;
+        }
         if (transform.position.y < -9)
         {
             theLevelManager.Respawn();
         }
 
 
-            myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
-            myAnim.SetBool("Grounded", isGrounded);
-
-            if (myRigidBody.velocity.y < 0)
-            {
-                stompBox.SetActive(true);
-            }
-            else
-            {
-                stompBox.SetActive(false);
-
-            }
-        }
+        myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
+        myAnim.SetBool("Grounded", isGrounded);
+    }
 
     public void Knockback()
     {
@@ -153,7 +151,21 @@ public class PlayerController : MonoBehaviour
         {
             transform.parent = other.transform;
             onPlatform = true;
-        }    
+        }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            foreach (ContactPoint2D point in other.contacts)
+            {
+                Debug.DrawLine(point.point, point.point + point.normal, Color.red, 10);
+                if (point.normal.y > 0.9)
+                {
+                    other.gameObject.SetActive(false);
+                    Instantiate(deathSplosion, other.transform.position, other.transform.rotation);
+                    myRigidBody.velocity = new Vector3(myRigidBody.transform.position.x, bounceForce, 0f);
+                }
+            }
+        }
     }
 
      void OnCollisionExit2D(Collision2D other)
@@ -164,4 +176,6 @@ public class PlayerController : MonoBehaviour
             onPlatform = false;
         }
     }
+
+    
 }

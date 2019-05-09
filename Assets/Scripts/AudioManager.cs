@@ -12,6 +12,10 @@ public class AudioManager : MonoBehaviour
     [Header("Player")]
     public AudioClip jump;
     public AudioClip coinPickup;
+    public AudioClip hitHurt;
+    public AudioClip heartPickup;
+    public AudioClip extaLifePickup;
+    public AudioClip skullPickup;
     [Header("Mixer")]
     public AudioMixerGroup musicGroup;
     public AudioMixerGroup playerGroup;
@@ -72,6 +76,15 @@ public class AudioManager : MonoBehaviour
         current.player.Play();
     }
 
+
+    public void PlayextaLifeAudio()
+    {
+        if (current == null)
+            return;
+
+        current.player.clip = current.extaLifePickup;
+        current.player.Play();
+    }
     public void PlayCoinAudio()
     {
         if (current == null)
@@ -80,6 +93,33 @@ public class AudioManager : MonoBehaviour
         current.player.clip = current.coinPickup;
         current.player.Play();
     }
+
+    public void PlayHeartPickupAudio()
+    {
+        if (current == null)
+            return;
+
+        current.player.clip = current.heartPickup;
+        current.player.Play();
+    }
+
+    public void PlaySkullPickupAudio()
+    {
+        if (current == null)
+            return;
+
+        current.player.clip = current.skullPickup;
+        current.player.Play();
+    }
+    public void PlayHitHurtAudio()
+    {
+        if (current == null)
+            return;
+
+        current.player.clip = current.hitHurt;
+        current.player.Play();
+    }
+
 
 }
 

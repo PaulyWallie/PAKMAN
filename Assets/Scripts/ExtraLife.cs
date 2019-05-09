@@ -6,10 +6,12 @@ public class ExtraLife : MonoBehaviour
 {
     public int livesToGive;
     private LevelManager theLevelManager;
+    private AudioManager AudioManager;
     // Start is called before the first frame update
     void Start()
     {
-        theLevelManager = FindObjectOfType<LevelManager>();  
+        theLevelManager = FindObjectOfType<LevelManager>();
+        AudioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,9 @@ public class ExtraLife : MonoBehaviour
         if (other.tag =="Player")
         {
             theLevelManager.AddLives(livesToGive);
+            AudioManager.PlayextaLifeAudio();
             gameObject.SetActive(false);
+
         }
     }
 }

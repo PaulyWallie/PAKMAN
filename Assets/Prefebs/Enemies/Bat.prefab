@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6765708083802099379}
   - component: {fileID: 6765708083802099380}
   - component: {fileID: 5448167764203074230}
-  - component: {fileID: 4543116967537443107}
   - component: {fileID: 6765708083802099391}
   m_Layer: 0
   m_Name: Bat
@@ -191,19 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
---- !u!114 &4543116967537443107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6765708083802099381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24230a6b1946159429b650232e90cf4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageToGive: 1
 --- !u!114 &6765708083802099391
 MonoBehaviour:
   m_ObjectHideFlags: 0
