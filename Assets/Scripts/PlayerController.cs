@@ -8,8 +8,10 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove;
 
-
     public float jumpSpeed;
+    public float jumpTime;
+    private float jumpTimeCounter;
+    private bool isJumping;
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -55,8 +57,10 @@ public class PlayerController : MonoBehaviour
         respawnPosition = transform.position;
 
         activeMoveSpeed = moveSpeed;
+        jumpTimeCounter = jumpTime;
 
         canMove = true;
+        isJumping = false;
     }
 
     // Update is called once per frame
@@ -66,37 +70,8 @@ public class PlayerController : MonoBehaviour
 
         if (knockbackCounter <= 0 && canMove)
         {
-
-            if (onPlatform)
-            {
-                activeMoveSpeed = moveSpeed * onPlatformSpeedModifier;
-            }
-            else
-            {
-                activeMoveSpeed = moveSpeed;
-            }
-
-
-            if (Input.GetAxisRaw("Horizontal") > 0f)
-            {
-                myRigidBody.velocity = new Vector2(activeMoveSpeed, myRigidBody.velocity.y);
-                transform.localScale = new Vector2(1f, 1f);
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0f)
-            {
-                myRigidBody.velocity = new Vector2(-activeMoveSpeed, myRigidBody.velocity.y);
-                transform.localScale = new Vector2(-1f, 1f);
-            }
-            else
-            {
-                myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
-            }
-
-            if (Input.GetButtonDown("Jump") && isGrounded)
-            {
-                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
-                audioManager.PlayJumpAudio();
-            }
+            OnPlatform();
+            Movement();
         }
 
         if (knockbackCounter > 0)
@@ -125,9 +100,59 @@ public class PlayerController : MonoBehaviour
             theLevelManager.Respawn();
         }
 
-
         myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
         myAnim.SetBool("Grounded", isGrounded);
+    }
+
+    private void Movement()
+    {
+        if (Input.GetAxisRaw("Horizontal") > 0f)
+        {
+            myRigidBody.velocity = new Vector2(activeMoveSpeed, myRigidBody.velocity.y);
+            transform.localScale = new Vector2(1f, 1f);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0f)
+        {
+            myRigidBody.velocity = new Vector2(-activeMoveSpeed, myRigidBody.velocity.y);
+            transform.localScale = new Vector2(-1f, 1f);
+        }
+        else
+        {
+            myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
+        }
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
+            audioManager.PlayJumpAudio();
+        }
+
+        if (Input.GetButton("Jump") && isJumping == true)
+        {
+            if (jumpTimeCounter >= 0)
+            {
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+    }
+
+    private void OnPlatform()
+    {
+        if (onPlatform)
+        {
+            activeMoveSpeed = moveSpeed * onPlatformSpeedModifier;
+        }
+        else
+        {
+            activeMoveSpeed = moveSpeed;
+        }
     }
 
     public void Knockback()
@@ -176,6 +201,4 @@ public class PlayerController : MonoBehaviour
             onPlatform = false;
         }
     }
-
-    
 }
