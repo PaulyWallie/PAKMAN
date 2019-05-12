@@ -119,8 +119,6 @@ public class AudioManager : MonoBehaviour
         current.player.clip = current.hitHurt;
         current.player.Play();
     }
-
-
 }
 
 

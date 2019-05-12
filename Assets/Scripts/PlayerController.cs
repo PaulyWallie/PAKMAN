@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 respawnPosition;
 
-   
+
     public float knockbackForce;
     public float knockbackLeagth;
     private float knockbackCounter;
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
 
-        theLevelManager = FindObjectOfType <LevelManager>();
+        theLevelManager = FindObjectOfType<LevelManager>();
         slimeController = FindObjectOfType<SlimeController>();
         audioManager = FindObjectOfType<AudioManager>();
         respawnPosition = transform.position;
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-     void OnCollisionExit2D(Collision2D other)
+    void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.tag == "MovingPlatform")
         {

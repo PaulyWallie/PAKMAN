@@ -15,6 +15,13 @@ public class LevelManager : MonoBehaviour
 
     public Text coinText;
 
+    public int currentSkulls;
+    public int levelSkullCount;
+    private bool canFinish;
+
+    public Text skullText;
+
+
     public Image heart1;
     public Image heart2;
     public Image heart3;
@@ -45,9 +52,11 @@ public class LevelManager : MonoBehaviour
     {
         thePlayer = FindObjectOfType<PlayerController>();
         healthCount = maxHealth;
+        canFinish = false;
+        currentSkulls = 0;
 
         objectsToReset = FindObjectsOfType<ResetOnRespawn>();
-        
+
         if (PlayerPrefs.HasKey("CoinCount"))
         {
             coinCount = PlayerPrefs.GetInt("CoinCount");
@@ -64,7 +73,6 @@ public class LevelManager : MonoBehaviour
 
         coinText.text = "Coins: " + coinCount;
         livesText.text = "Lives x " + currentLives;
-
     }
 
     // Update is called once per frame
@@ -74,7 +82,7 @@ public class LevelManager : MonoBehaviour
         {
             Respawn();
         }
-           
+
 
         if (coinBonusLifeCount >= bonsusLifeThresehold)
         {
@@ -101,9 +109,9 @@ public class LevelManager : MonoBehaviour
                 gameOverScreen.SetActive(true);
                 AudioManager.current.PlayGameoverMusic();
             }
-        }   
+        }
     }
-    
+
     public IEnumerator RespawnCO()
     {
         respawnCoActive = true;
@@ -125,7 +133,7 @@ public class LevelManager : MonoBehaviour
         thePlayer.transform.position = thePlayer.respawnPosition;
         thePlayer.gameObject.SetActive(true);
 
-        for (int i = 0; i < objectsToReset.Length ; i++)
+        for (int i = 0; i < objectsToReset.Length; i++)
         {
             objectsToReset[i].gameObject.SetActive(true);
             objectsToReset[i].ResetObect();
@@ -141,7 +149,20 @@ public class LevelManager : MonoBehaviour
 
         AudioManager.current.PlayCoinAudio();
     }
-  
+
+    public void AddLives(int LivesToGive)
+    {
+        currentLives += LivesToGive;
+        livesText.text = "Lives x " + currentLives;
+
+        AudioManager.current.PlayextaLifeAudio();
+    }
+
+    public void AddSkulls(int skullsToGive)
+    {
+        currentSkulls += skullsToGive;
+        skullText.text = "Skulls: " + currentSkulls;
+    }
 
     public void HurtPlayer(int damageToTake)
     {
@@ -153,17 +174,14 @@ public class LevelManager : MonoBehaviour
             thePlayer.Knockback();
         }
     }
-        public void GiveHeath(int healthToGive)
-        {
-            healthCount += healthToGive;
+    public void GiveHeath(int healthToGive)
+    {
+        healthCount += healthToGive;
 
         if (healthCount > maxHealth)
         {
             healthCount = maxHealth;
         }
-
-        
-
         UpdateHeartMeter();
     }
 
@@ -211,17 +229,7 @@ public class LevelManager : MonoBehaviour
                 heart2.sprite = heartEmpty;
                 heart3.sprite = heartEmpty;
                 return;
-
-
-            }
         }
-    public void AddLives(int LivesToGive)
-    {
-        currentLives += LivesToGive;
-        livesText.text = "Lives x " + currentLives;
     }
- }
-
-
-    
+}
 

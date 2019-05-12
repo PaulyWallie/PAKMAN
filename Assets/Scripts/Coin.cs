@@ -13,19 +13,11 @@ public class Coin : MonoBehaviour
         theLevelManager = FindObjectOfType<LevelManager>(); 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
             theLevelManager.AddCoins(coinValue);
-
-            //Destroy(gameObject);
             gameObject.SetActive(false);
         }
     }
