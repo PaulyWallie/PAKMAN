@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Music")]
     public AudioClip levelMusic;
+    public AudioClip MenuMusic;
     public AudioClip gameoverMusic;
     public AudioClip victoryMusic;
     [Header("Player")]
@@ -37,13 +38,23 @@ public class AudioManager : MonoBehaviour
 
         music.outputAudioMixerGroup = musicGroup;
         player.outputAudioMixerGroup = playerGroup;
-        StartLevelMusic();
+        PlayLevelMusic();
     }
 
-    void StartLevelMusic()
+   public void PlayLevelMusic()
     {
         current.music.clip = current.levelMusic;
         current.music.loop = true;
+        current.music.Play();
+    }
+
+    public void PlayMenuMusic()
+    {
+        if (current == null)
+            return;
+
+        current.music.Stop();
+        current.music.clip = current.MenuMusic;
         current.music.Play();
     }
 
@@ -54,7 +65,7 @@ public class AudioManager : MonoBehaviour
 
         current.music.Stop();
         current.music.clip = current.gameoverMusic;
-        current.player.Play();
+        current.music.Play();
     }
 
     public void PlayVictoryMusic()

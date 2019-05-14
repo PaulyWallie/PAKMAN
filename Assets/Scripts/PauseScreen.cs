@@ -39,10 +39,11 @@ public class PauseScreen : MonoBehaviour
 
     public void PauseGame()
     {
-            Time.timeScale = 0;
+        Time.timeScale = 0;
 
-            thePauseScreen.SetActive(true);
-            thePlayer.canMove = false;
+        thePauseScreen.SetActive(true);
+        thePlayer.canMove = false;
+        AudioManager.current.PlayMenuMusic();
     }
 
     public void ResumeGame()
@@ -51,6 +52,7 @@ public class PauseScreen : MonoBehaviour
 
         thePauseScreen.SetActive(false);
         thePlayer.canMove = true;
+        AudioManager.current.PlayLevelMusic();
     }
 
     public void LevelSelect()
@@ -66,5 +68,6 @@ public class PauseScreen : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenu);
+      
     }
 }

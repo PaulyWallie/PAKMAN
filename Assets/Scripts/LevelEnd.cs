@@ -35,8 +35,10 @@ public class LevelEnd : MonoBehaviour
     {
         if (other.tag =="Player")
         {
-            
-            StartCoroutine("LevelEndCo");
+            if(theLevelManager.canFinish)
+            {
+                StartCoroutine("LevelEndCo");
+            }
         }
     }
 

@@ -17,10 +17,9 @@ public class LevelManager : MonoBehaviour
 
     public int currentSkulls;
     public int levelSkullCount;
-    private bool canFinish;
+    public bool canFinish;
 
     public Text skullText;
-
 
     public Image heart1;
     public Image heart2;
@@ -73,6 +72,7 @@ public class LevelManager : MonoBehaviour
 
         coinText.text = "Coins: " + coinCount;
         livesText.text = "Lives x " + currentLives;
+        skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
     }
 
     // Update is called once per frame
@@ -161,7 +161,12 @@ public class LevelManager : MonoBehaviour
     public void AddSkulls(int skullsToGive)
     {
         currentSkulls += skullsToGive;
-        skullText.text = "Skulls: " + currentSkulls;
+        skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
+        if(currentSkulls == levelSkullCount)
+        {
+            canFinish = true;
+        }
+        AudioManager.current.PlaySkullPickupAudio();
     }
 
     public void HurtPlayer(int damageToTake)

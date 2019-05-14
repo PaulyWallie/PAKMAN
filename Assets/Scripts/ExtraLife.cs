@@ -14,11 +14,6 @@ public class ExtraLife : MonoBehaviour
         AudioManager = FindObjectOfType<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
      void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag =="Player")

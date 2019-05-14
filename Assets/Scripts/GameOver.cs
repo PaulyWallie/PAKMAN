@@ -17,12 +17,6 @@ public class GameOver : MonoBehaviour
         theLevelManager = FindObjectOfType<LevelManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Restart()
     {
         PlayerPrefs.SetInt("CoinCount", 0);

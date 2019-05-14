@@ -14,7 +14,6 @@ public class HeathPickup : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
     }
 
-  
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")

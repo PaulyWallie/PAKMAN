@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour
 
     public int startingLives;
 
+    private void Start()
+    {
+        AudioManager.current.PlayMenuMusic();
+    }
+
     public void NewGame()
     {
         SceneManager.LoadScene(firstLevel);
@@ -20,7 +25,8 @@ public class MainMenu : MonoBehaviour
         }
 
         PlayerPrefs.SetInt("CoinCount", 0);
-        PlayerPrefs.SetInt("PlayerLives", startingLives);    
+        PlayerPrefs.SetInt("PlayerLives", startingLives);
+        AudioManager.current.PlayLevelMusic();
     }
 
     public void Continue()

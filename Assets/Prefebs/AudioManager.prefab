@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4128991061478789357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4128991061478789358}
+  - component: {fileID: 4128991061478789359}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4128991061478789358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4128991061478789357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4128991061478789359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4128991061478789357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f55739ad97afa4ea20d043b5f81b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMusic: {fileID: 8300000, guid: 60ac3dc286baeb54f8a4ba5254864980, type: 3}
+  MenuMusic: {fileID: 0}
+  gameoverMusic: {fileID: 8300000, guid: 61ffdae5a778d5240a95ac4050a6de14, type: 3}
+  victoryMusic: {fileID: 8300000, guid: 432c01b4510d8324cacda827ee6141dc, type: 3}
+  jump: {fileID: 8300000, guid: cae2fccbc3877524ba3c894f6d705752, type: 3}
+  coinPickup: {fileID: 8300000, guid: a3802a26952057c4c86efb4b66e5e2ca, type: 3}
+  hitHurt: {fileID: 8300000, guid: df912e032b18769418af3e27986acdfd, type: 3}
+  heartPickup: {fileID: 8300000, guid: 85137b53708ee9941a10c4616f90f303, type: 3}
+  extaLifePickup: {fileID: 8300000, guid: f6bc4d50b2ae24e48936b8b5ed1c4435, type: 3}
+  skullPickup: {fileID: 0}
+  musicGroup: {fileID: 243903535798321018, guid: 698c5fe04fb458b46965fb637efc03ff,
+    type: 2}
+  playerGroup: {fileID: 243143753822866506, guid: 698c5fe04fb458b46965fb637efc03ff,
+    type: 2}
