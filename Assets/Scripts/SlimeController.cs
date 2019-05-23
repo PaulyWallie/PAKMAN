@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlimeController : MonoBehaviour
 {
-    public int damageToGive;
+   
     public Transform leftPoint;
     public Transform rightPoint;
 

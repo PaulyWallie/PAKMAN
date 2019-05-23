@@ -42,11 +42,11 @@ public class BossSlime : MonoBehaviour
         }
         if (movingRight)
         {
-            myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0);
+            myRigidBody.velocity = new Vector2(moveSpeed, myRigidBody.velocity.y);
         }
         else
         {
-            myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0);
+            myRigidBody.velocity = new Vector2(-moveSpeed, myRigidBody.velocity.y);
         }
     }
      public void TakeDamage()
