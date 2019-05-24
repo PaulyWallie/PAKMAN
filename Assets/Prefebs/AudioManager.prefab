@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelMusic: {fileID: 8300000, guid: 60ac3dc286baeb54f8a4ba5254864980, type: 3}
-  MenuMusic: {fileID: 0}
+  MenuMusic: {fileID: 8300000, guid: ccb3f7422722c3d448c6fef7d81b5a59, type: 3}
   gameoverMusic: {fileID: 8300000, guid: 61ffdae5a778d5240a95ac4050a6de14, type: 3}
   victoryMusic: {fileID: 8300000, guid: 432c01b4510d8324cacda827ee6141dc, type: 3}
   jump: {fileID: 8300000, guid: cae2fccbc3877524ba3c894f6d705752, type: 3}
