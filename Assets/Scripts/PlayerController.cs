@@ -38,13 +38,6 @@ public class PlayerController : MonoBehaviour
     private bool onPlatform;
     public float onPlatformSpeedModifier;
 
-    public int damageToGive;
-
-    public float bounceForce;
-
-    public GameObject deathSplosion;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -176,21 +169,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.parent = other.transform;
             onPlatform = true;
-        }
-
-        if (other.gameObject.tag == "Enemy")
-        {
-            foreach (ContactPoint2D point in other.contacts)
-            {
-                Debug.DrawLine(point.point, point.point + point.normal, Color.red, 10);
-                if (point.normal.y > 0.9)
-                {
-                    other.gameObject.SetActive(false);
-                    Instantiate(deathSplosion, other.transform.position, other.transform.rotation);
-                    myRigidBody.velocity = new Vector3(myRigidBody.transform.position.x, bounceForce, 0f);
-                }
-            }
-        }
+        }    
     }
 
     void OnCollisionExit2D(Collision2D other)
