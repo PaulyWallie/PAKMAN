@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private float jumpTimeCounter;
     private bool isJumping;
 
+    public float bounceForce;
+
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -154,6 +156,12 @@ public class PlayerController : MonoBehaviour
         invicibilityCounter = inviaibiltyLength;
         theLevelManager.invinciable = true;
     }
+
+    public void Bounce()
+    {
+        myRigidBody.velocity = new Vector3(myRigidBody.transform.position.x, bounceForce, 0f);
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {

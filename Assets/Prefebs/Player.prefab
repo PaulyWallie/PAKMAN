@@ -236,6 +236,7 @@ MonoBehaviour:
   canMove: 0
   jumpSpeed: 8
   jumpTime: 0.2
+  bounceForce: 8
   groundCheck: {fileID: 167394826244874526}
   groundCheckRadius: 0.25
   whatIsGround:
@@ -318,7 +319,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3754a9ebaaf19564a88eba694d3a338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidBody: {fileID: 167394827454013854}
-  deathSplosion: {fileID: 1175641504906137808, guid: 02569dcecaa01dc489fe5f31bd58615d,
-    type: 3}
-  bounceForce: 5

@@ -160,12 +160,12 @@ public class LevelManager : MonoBehaviour
 
     public void AddSkulls(int skullsToGive)
     {
-        currentSkulls += skullsToGive;
-        skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
         if(currentSkulls == levelSkullCount)
         {
             canFinish = true;
         }
+        currentSkulls += skullsToGive;
+        skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
         AudioManager.current.PlaySkullPickupAudio();
     }
 

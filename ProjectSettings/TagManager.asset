@@ -8,8 +8,7 @@ TagManager:
   - Checkpoint
   - MovingPlatform
   - Enemy
-  - Boss
-  - SlimeBoss
+  - Boss1
   layers:
   - Default
   - TransparentFX

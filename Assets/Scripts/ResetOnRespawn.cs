@@ -31,6 +31,7 @@ public class ResetOnRespawn : MonoBehaviour
 
     public void ResetObect()
     {
+        FindObjectOfType<EnemyHealth>().ResetHealth();
         transform.position = startPosition;
         transform.rotation = startRotation;
         transform.localScale = startLocalScale;

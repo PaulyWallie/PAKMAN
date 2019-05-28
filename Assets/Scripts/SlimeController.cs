@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SlimeController : MonoBehaviour
 {
-   
     public Transform leftPoint;
     public Transform rightPoint;
 
@@ -13,14 +12,11 @@ public class SlimeController : MonoBehaviour
     private Rigidbody2D myRigidBody;
 
     public bool movingRight;
-    private LevelManager LevelManager;
-
-
+ 
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        LevelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame

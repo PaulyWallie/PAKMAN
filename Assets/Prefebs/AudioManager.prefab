@@ -52,7 +52,7 @@ MonoBehaviour:
   hitHurt: {fileID: 8300000, guid: df912e032b18769418af3e27986acdfd, type: 3}
   heartPickup: {fileID: 8300000, guid: 85137b53708ee9941a10c4616f90f303, type: 3}
   extaLifePickup: {fileID: 8300000, guid: f6bc4d50b2ae24e48936b8b5ed1c4435, type: 3}
-  skullPickup: {fileID: 0}
+  skullPickup: {fileID: 8300000, guid: 6139e237ece17e94db30a0be496ecbec, type: 3}
   musicGroup: {fileID: 243903535798321018, guid: 698c5fe04fb458b46965fb637efc03ff,
     type: 2}
   playerGroup: {fileID: 243143753822866506, guid: 698c5fe04fb458b46965fb637efc03ff,

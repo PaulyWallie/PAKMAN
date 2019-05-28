@@ -71,14 +71,15 @@
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
+    <Compile Include="Assets\Boss1.cs" />
     <Compile Include="Assets\Boss2.cs" />
     <Compile Include="Assets\Boss2Idle.cs" />
     <Compile Include="Assets\Boss2Intro.cs" />
     <Compile Include="Assets\Boss2Walk.cs" />
     <Compile Include="Assets\BossTrigger.cs" />
+    <Compile Include="Assets\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BatController.cs" />
-    <Compile Include="Assets\Scripts\BossSlime.cs" />
     <Compile Include="Assets\Scripts\CheckpointController.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
