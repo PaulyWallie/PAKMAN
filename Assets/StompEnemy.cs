@@ -15,6 +15,10 @@ public class StompEnemy : MonoBehaviour
         {
             FindObjectOfType<Boss1>().BossDamage();
         }
-       
+
+        if (other.tag == "Boss2")
+        {
+            FindObjectOfType<Boss2>().BossDamage();
+        }
     }
 }

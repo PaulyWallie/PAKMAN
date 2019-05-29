@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - KillPlane
   - Checkpoint
   - MovingPlatform
   - Enemy
   - Boss1
+  - Boss2
   layers:
   - Default
   - TransparentFX
