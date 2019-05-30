@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
         }
 
         coinText.text = "Coins: " + coinCount;
-        livesText.text = "Lives x " + currentLives;
+        livesText.text = "x " + currentLives;
         skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
     }
 
@@ -87,7 +87,7 @@ public class LevelManager : MonoBehaviour
         if (coinBonusLifeCount >= bonsusLifeThresehold)
         {
             currentLives += 1;
-            livesText.text = "Lives x " + currentLives;
+            livesText.text = "x " + currentLives;
             coinBonusLifeCount -= bonsusLifeThresehold;
         }
     }
@@ -97,7 +97,7 @@ public class LevelManager : MonoBehaviour
         if (!respawning)
         {
             currentLives -= 1;
-            livesText.text = "Lives x " + currentLives;
+            livesText.text = "x " + currentLives;
             if (currentLives > 0)
             {
                 respawning = true;
@@ -153,19 +153,19 @@ public class LevelManager : MonoBehaviour
     public void AddLives(int LivesToGive)
     {
         currentLives += LivesToGive;
-        livesText.text = "Lives x " + currentLives;
+        livesText.text = "x " + currentLives;
 
         AudioManager.current.PlayextaLifeAudio();
     }
 
     public void AddSkulls(int skullsToGive)
     {
+        currentSkulls += skullsToGive;
+        skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
         if(currentSkulls == levelSkullCount)
         {
             canFinish = true;
         }
-        currentSkulls += skullsToGive;
-        skullText.text = "Skulls: " + currentSkulls + "/" + levelSkullCount;
         AudioManager.current.PlaySkullPickupAudio();
     }
 

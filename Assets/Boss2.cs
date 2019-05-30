@@ -6,22 +6,24 @@ public class Boss2 : MonoBehaviour
 {
     public Transform leftPoint;
     public Transform rightPoint;
+    public GameObject victory;
     public float moveSpeed;
 
     public bool movingRight;
-
-    enum bossState {BossDamageOne, BossDamageTwo, BossDamageThree};
-    Rigidbody2D rigidbody; 
+  
+    enum bossState {BossDamageOne, BossDamageTwo, BossDamageThree, BossDied};
+    bossState currentState = bossState.BossDamageOne;
+    Rigidbody2D rigidBody; 
     Animator anim;
     SpriteRenderer spriteRenderer;
     EnemyHealth enemyHealth;
     // Start is called before the first frame update
     void Start()
     {
-        //bossState.BossDamageOne;
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        moveSpeed = 3;
     }
 
     // Update is called once per frame
@@ -37,20 +39,43 @@ public class Boss2 : MonoBehaviour
         }
         if (movingRight)
         {
-            rigidbody.velocity = new Vector3(moveSpeed, rigidbody.velocity.y, 0);
+            rigidBody.velocity = new Vector3(moveSpeed, rigidBody.velocity.y, 0);
             spriteRenderer.flipX = false;
         }
         else
         {
-            rigidbody.velocity = new Vector3(-moveSpeed, rigidbody.velocity.y, 0);
+            rigidBody.velocity = new Vector3(-moveSpeed, rigidBody.velocity.y, 0);
             spriteRenderer.flipX = true;
-
         }
+        anim.SetBool("Walk", true);
     }
-
+   
     public void BossDamage()
     {
-        enemyHealth.TakeDamage();
-        //bossState++;
+        GetComponent<EnemyHealth>().TakeDamage();
+        currentState++;
+        switch (currentState)
+        {
+            case bossState.BossDamageTwo:
+                anim.SetBool("Phase2", true);
+                moveSpeed++;
+                break;
+
+            case bossState.BossDamageThree:
+                anim.SetBool("Phase3", true);
+                anim.SetBool("Phase2", false);
+                moveSpeed++;
+                break;
+            case bossState.BossDied:
+                anim.SetBool("Phase3",false);
+                rigidBody.velocity = Vector2.zero;
+                anim.SetTrigger("BossEnd");
+                break;
+
+        }
+                if (enemyHealth.currentHealth <= 0)
+                {
+                    victory.SetActive(true);
+                }
     }
 }

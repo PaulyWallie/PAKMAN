@@ -6,10 +6,11 @@ public class Boss1 : MonoBehaviour
 {
     public Transform leftPoint;
     public Transform rightPoint;
+  
 
     public float moveSpeed;
 
-    private Rigidbody2D myRigidBody;
+    Rigidbody2D myRigidBody;
 
     public bool movingRight;
 
@@ -47,8 +48,6 @@ public class Boss1 : MonoBehaviour
         {
             myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0);
         }
-      
-
     }
     public void BossDamage()
     {

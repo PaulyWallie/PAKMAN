@@ -111,7 +111,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -140,7 +140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3063430429594118192}
   - component: {fileID: 3063430429594118193}
-  - component: {fileID: 3063430429594118198}
   m_Layer: 0
   m_Name: Moving SpinSaw
   m_TagString: Untagged
@@ -181,19 +180,6 @@ MonoBehaviour:
   startPoint: {fileID: 5492133496531949130}
   endPoint: {fileID: 728663848305163133}
   moveSpeed: 2
---- !u!114 &3063430429594118198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3063430429594118195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24230a6b1946159429b650232e90cf4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageToGive: 1
 --- !u!1 &5582762572541748451
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
         current = this;
-        DontDestroyOnLoad(gameObject);
 
         music = gameObject.AddComponent<AudioSource>();
         player = gameObject.AddComponent<AudioSource>();

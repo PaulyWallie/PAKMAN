@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   canMove: 0
-  jumpSpeed: 8
+  jumpSpeed: 10
   jumpTime: 0.2
   bounceForce: 8
   groundCheck: {fileID: 167394826244874526}
