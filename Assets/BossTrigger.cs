@@ -5,13 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class BossTrigger : MonoBehaviour
 {
- 
-    public GameObject Boss;
+    public GameObject boss;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            Boss.SetActive(true);
+            boss.SetActive(true);
             Destroy(this);
         }
     }

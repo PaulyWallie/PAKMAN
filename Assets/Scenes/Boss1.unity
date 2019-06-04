@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3605e4f274299a4b8ba0e42d185c7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 8647031899241384826}
+  boss: {fileID: 8647031899241384826}
 --- !u!61 &360492148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -574,7 +574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398621251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12891096, y: -3.9942193, z: -10}
+  m_LocalPosition: {x: 0.12875062, y: -3.9942226, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1353,7 +1353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415658060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1296162, y: -5.852, z: -10}
+  m_LocalPosition: {x: 0.12945586, y: -5.852, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1586447485}
@@ -4794,7 +4794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8647031899241384826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.84, y: -3.86, z: 0}
+  m_LocalPosition: {x: 37.84, y: -4.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8647031899985809650}
@@ -4871,7 +4871,7 @@ Animator:
   m_GameObject: {fileID: 8647031899985809653}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4df5b2eeccc4ee643940680af2fc68dd, type: 2}
+  m_Controller: {fileID: 9100000, guid: d58ec264a3350ad4f9840e03d3cc18dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4979,6 +4979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db786aa32c870a4f866e7167284807a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entrance: {fileID: 1175641504906137808, guid: 05640e8544aa72c41ad3d2fea79c1685,
+    type: 3}
   leftPoint: {fileID: 8647031898894238136}
   rightPoint: {fileID: 8647031899777284462}
   moveSpeed: 3
