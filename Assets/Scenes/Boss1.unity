@@ -4931,7 +4931,7 @@ SpriteRenderer:
   m_SortingLayerID: -1011455971
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300062, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
+  m_Sprite: {fileID: 21300066, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4983,6 +4983,8 @@ MonoBehaviour:
     type: 3}
   leftPoint: {fileID: 8647031898894238136}
   rightPoint: {fileID: 8647031899777284462}
+  speed: 8
+  speedDone: 0
   moveSpeed: 3
   movingRight: 0
   slimes: {fileID: 499039652214144092, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
@@ -5003,7 +5005,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

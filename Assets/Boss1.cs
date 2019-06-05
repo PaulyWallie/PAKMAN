@@ -5,12 +5,10 @@ using UnityEngine;
 public class Boss1 : MonoBehaviour
 {
     public GameObject entrance;
-    //bool entrancePlayed;
-    //public float particalLength;
-  
     public Transform leftPoint;
     public Transform rightPoint;
-
+    public int speed;
+    public bool speedDone;
     public float moveSpeed;
 
     Rigidbody2D myRigidBody;
@@ -33,22 +31,24 @@ public class Boss1 : MonoBehaviour
         anim = GetComponent<Animator>();
         moveSpeed = 3;
         Instantiate(entrance, gameObject.transform.parent);
-       
+        StartCoroutine(Entrance());
     }
 
+  IEnumerator Entrance()
+   {
+      yield return new WaitForSeconds(8f);
+
+      anim.SetTrigger("Boss Moving");
+   }
     // Update is called once per frame
     void Update()
     {
-       // if (entrancePlayed && particalLength <= 0)
-       // {
-            anim.SetBool("Boss Entrance", true);
-           // entrancePlayed = false;
-        //}
-        //else
-        //{
-          //  particalLength = -Time.deltaTime; ;
-        //}
+ 
+            Moving();
+    }
 
+    private void Moving()
+    {
         if (movingRight && transform.position.x > rightPoint.position.x)
         {
             movingRight = false;
@@ -60,12 +60,14 @@ public class Boss1 : MonoBehaviour
         if (movingRight)
         {
             myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0);
+            Debug.Log("is moving");
         }
         else
         {
             myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0);
         }
     }
+
     public void BossDamage()
     {
         enemyHealth.TakeDamage();
