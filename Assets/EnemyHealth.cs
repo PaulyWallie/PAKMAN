@@ -5,13 +5,15 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int MaxHealth = 1;
-    public int currentHealth; 
+    public int currentHealth;
+    SpriteRenderer renderer;
 
     public GameObject deathSplosion;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = MaxHealth;
+        renderer = GetComponent<SpriteRenderer>();
     }
     public void TakeDamage()
     {
@@ -29,4 +31,5 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth = MaxHealth;
     }
+  
 }

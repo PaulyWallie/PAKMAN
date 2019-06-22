@@ -7,12 +7,12 @@ public class Boss1 : MonoBehaviour
     public GameObject entrance;
     public Transform leftPoint;
     public Transform rightPoint;
-    public int speed;
-    public bool speedDone;
+
     public float moveSpeed;
 
     Rigidbody2D myRigidBody;
     Animator anim;
+    SpriteRenderer spriteRenderer;
 
     public bool movingRight;
 
@@ -29,22 +29,22 @@ public class Boss1 : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         moveSpeed = 3;
-        Instantiate(entrance, gameObject.transform.parent);
-        StartCoroutine(Entrance());
+        //  Instantiate(entrance, gameObject.transform.parent);
+        // StartCoroutine(Entrance());
     }
 
-  IEnumerator Entrance()
-   {
-      yield return new WaitForSeconds(8f);
+    IEnumerator Entrance()
+    {
+        yield return new WaitForSeconds(8f);
 
-      anim.SetTrigger("Boss Moving");
-   }
+        anim.SetTrigger("Boss Moving");
+    }
     // Update is called once per frame
     void Update()
     {
- 
-            Moving();
+        Moving();
     }
 
     private void Moving()
@@ -59,12 +59,13 @@ public class Boss1 : MonoBehaviour
         }
         if (movingRight)
         {
-            myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0);
-            Debug.Log("is moving");
+            myRigidBody.velocity = new Vector2(moveSpeed, myRigidBody.velocity.y);
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
-            myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0);
+            myRigidBody.velocity = new Vector2(-moveSpeed, myRigidBody.velocity.y);
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
@@ -73,6 +74,7 @@ public class Boss1 : MonoBehaviour
         enemyHealth.TakeDamage();
         Instantiate(slimes, gameObject.transform.position, Quaternion.identity);
         moveSpeed += 2;
+        transform.localScale = new Vector2(1.5f, 1.5f);
 
 
         Debug.Log("Hurt");
@@ -81,6 +83,6 @@ public class Boss1 : MonoBehaviour
             bridge.SetActive(true);
             victory.SetActive(true);
         }
-    }
 
+    }
 }
