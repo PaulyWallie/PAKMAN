@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButton("Jump") && isJumping == true)
         {
-            if (jumpTimeCounter >= 0)
+            if (jumpTimeCounter > 0)
             {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
                 jumpTimeCounter -= Time.deltaTime;

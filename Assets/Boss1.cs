@@ -21,6 +21,8 @@ public class Boss1 : MonoBehaviour
 
     public GameObject bridge;
     public GameObject victory;
+    public GameObject flyingDirt;
+   
 
 
     // Start is called before the first frame update
@@ -30,20 +32,23 @@ public class Boss1 : MonoBehaviour
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        moveSpeed = 3;
+        moveSpeed = 0;
         //  Instantiate(entrance, gameObject.transform.parent);
         // StartCoroutine(Entrance());
     }
 
     IEnumerator Entrance()
     {
-        yield return new WaitForSeconds(8f);
+        moveSpeed = 0;
+        yield return new WaitForSeconds( 3f);
+        moveSpeed = 3;
 
-        anim.SetTrigger("Boss Moving");
+
     }
     // Update is called once per frame
     void Update()
     {
+    
         Moving();
     }
 
@@ -76,13 +81,10 @@ public class Boss1 : MonoBehaviour
         moveSpeed += 2;
         transform.localScale = new Vector2(1.5f, 1.5f);
 
-
-        Debug.Log("Hurt");
         if (enemyHealth.currentHealth <= 0)
         {
             bridge.SetActive(true);
             victory.SetActive(true);
         }
-
     }
 }
