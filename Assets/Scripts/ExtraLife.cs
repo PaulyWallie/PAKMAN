@@ -18,8 +18,8 @@ public class ExtraLife : MonoBehaviour
     {
         if (other.tag =="Player")
         {
-            theLevelManager.AddLives(livesToGive);
-            AudioManager.PlayextaLifeAudio();
+            //theLevelManager.AddLives(livesToGive);
+            //AudioManager.PlayextaLifeAudio();
             gameObject.SetActive(false);
 
         }

@@ -33,6 +33,7 @@ public class Boss1 : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         moveSpeed = 0;
+        movingRight = false;
         //  Instantiate(entrance, gameObject.transform.parent);
         // StartCoroutine(Entrance());
     }

@@ -2,190 +2,105 @@
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
 
     public float moveSpeed;
-    private float activeMoveSpeed;
+    public float jumpForce;
+    public Rigidbody2D theRB;
 
-    public bool canMove;
-
-    public float jumpSpeed;
-    public float jumpTime;
-    private float jumpTimeCounter;
-    private bool isJumping;
-
-    public float bounceForce;
-
-    public Transform groundCheck;
-    public float groundCheckRadius;
+    private bool isGrounded;
+    public Transform checkGroundPoint;
     public LayerMask whatIsGround;
 
-    public bool isGrounded;
+    private bool canDoupleJump;
+    private SpriteRenderer theSR;
 
-    public Rigidbody2D myRigidBody;
-    private Animator myAnim;
-    private LevelManager theLevelManager;
-    private SlimeController slimeController;
-    private AudioManager audioManager;
+    private Animator anim;
+    public float knockBackLength, knockBackForce;
+    private float knockBackCounter;
+    public float bounceForce;
 
-    public Vector2 respawnPosition;
+    public bool stopInput;
 
-
-    public float knockbackForce;
-    public float knockbackLeagth;
-    private float knockbackCounter;
-
-    public float inviaibiltyLength;
-    private float invicibilityCounter;
-
-    private bool onPlatform;
-    public float onPlatformSpeedModifier;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        myRigidBody = GetComponent<Rigidbody2D>();
-        myAnim = GetComponent<Animator>();
-
-        theLevelManager = FindObjectOfType<LevelManager>();
-        slimeController = FindObjectOfType<SlimeController>();
-        audioManager = FindObjectOfType<AudioManager>();
-        respawnPosition = transform.position;
-
-        activeMoveSpeed = moveSpeed;
-        jumpTimeCounter = jumpTime;
-
-        canMove = true;
-        isJumping = false;
+        instance = this;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Start()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        anim = GetComponent<Animator>();
+        theSR = GetComponent<SpriteRenderer>();
+    }
 
-        if (knockbackCounter <= 0 && canMove)
+    private void Update()
+    {
+        if (knockBackCounter<= 0)
         {
-            OnPlatform();
-            Movement();
-        }
+            theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
 
-        if (knockbackCounter > 0)
-        {
-            knockbackCounter -= Time.deltaTime;
-            if (transform.localScale.x > 0)
+            isGrounded = Physics2D.OverlapCircle(checkGroundPoint.position, .2f, whatIsGround);
+
+            if (isGrounded)
             {
-                myRigidBody.velocity = new Vector2(-knockbackForce, knockbackForce);
+                canDoupleJump = true;
+            }
+
+            if (Input.GetButton("Jump"))
+            {
+                if (isGrounded)
+                {
+                    theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                    //AudioManager.instance()
+                }
+                else
+                {
+                    if (canDoupleJump)
+                    {
+                        theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                        canDoupleJump = false;
+                        //AudioManager.instance()
+                    }
+                }
+            }
+
+            if (theRB .velocity.x < 0)
+            {
+                theSR.flipX = true;
+            }
+            else if (theRB.velocity.x > 0)
+            {
+                theSR.flipX = false;
             }
             else
             {
-                myRigidBody.velocity = new Vector2(knockbackForce, knockbackForce);
+                knockBackForce -= Time.deltaTime;
+                if (!theSR.flipX)
+                {
+                    theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
+                }
+                else
+                {
+                    theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
+                }
             }
         }
 
-        if (invicibilityCounter > 0)
-        {
-            invicibilityCounter -= Time.deltaTime;
-        }
-        if (invicibilityCounter <= 0)
-        {
-            theLevelManager.invinciable = false;
-        }
-        if (transform.position.y < -9)
-        {
-            theLevelManager.Respawn();
-        }
-
-        myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
-        myAnim.SetBool("Grounded", isGrounded);
+        anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
+        anim.SetBool("isGrounded", isGrounded);
     }
-
-    private void Movement()
+    public void KnockBack()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0f)
-        {
-            myRigidBody.velocity = new Vector2(activeMoveSpeed, myRigidBody.velocity.y);
-            transform.localScale = new Vector2(1f, 1f);
-        }
-        else if (Input.GetAxisRaw("Horizontal") < 0f)
-        {
-            myRigidBody.velocity = new Vector2(-activeMoveSpeed, myRigidBody.velocity.y);
-            transform.localScale = new Vector2(-1f, 1f);
-        }
-        else
-        {
-            myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
-        }
+        knockBackLength = knockBackCounter;
+        theRB.velocity = new Vector2(0f, knockBackForce);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
-            audioManager.PlayJumpAudio();
-        }
-
-        if (Input.GetButton("Jump") && isJumping == true)
-        {
-            if (jumpTimeCounter > 0)
-            {
-                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
-                jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
-        }
-    }
-
-    private void OnPlatform()
-    {
-        if (onPlatform)
-        {
-            activeMoveSpeed = moveSpeed * onPlatformSpeedModifier;
-        }
-        else
-        {
-            activeMoveSpeed = moveSpeed;
-        }
-    }
-
-    public void Knockback()
-    {
-        knockbackCounter = knockbackLeagth;
-        invicibilityCounter = inviaibiltyLength;
-        theLevelManager.invinciable = true;
+        anim.SetTrigger("Hurt");
     }
 
     public void Bounce()
     {
-        myRigidBody.velocity = new Vector3(myRigidBody.transform.position.x, bounceForce, 0f);
-    }
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Checkpoint")
-        {
-            respawnPosition = other.transform.position;
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "MovingPlatform")
-        {
-            transform.parent = other.transform;
-            onPlatform = true;
-        }    
-    }
-
-    void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "MovingPlatform")
-        {
-            transform.parent = null;
-            onPlatform = false;
-        }
-    }
+        theRB.velocity = new Vector2(theRB.velocity.x, bounceForce);
+        //AudioManager.intance.PlaySFX();
+    } 
 }
+   

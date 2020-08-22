@@ -20,8 +20,8 @@ public class HurtPlayer : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            theLevelManager.HurtPlayer(damageToGive);
-            audioManager.PlayHitHurtAudio();
+            //theLevelManager.HurtPlayer(damageToGive);
+            //audioManager.PlayHitHurtAudio();
         }
     }
 }

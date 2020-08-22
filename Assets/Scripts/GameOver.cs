@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         PlayerPrefs.SetInt("CoinCount", 0);
-        PlayerPrefs.SetInt("PlayerLives", theLevelManager.startingLives);
+      //  PlayerPrefs.SetInt("PlayerLives", theLevelManager.startingLives);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
     public void LevelSelect()
     {
         PlayerPrefs.SetInt("CoinCount", 0);
-        PlayerPrefs.SetInt("PlayerLives", theLevelManager.startingLives);
+       // PlayerPrefs.SetInt("PlayerLives", theLevelManager.startingLives);
 
         SceneManager.LoadScene(mainMenu);
     }

@@ -17,7 +17,7 @@ public class Skull : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            theLevelManager.AddSkulls(skullValue);
+           // theLevelManager.AddSkulls(skullValue);
             gameObject.SetActive(false);
         }
     }

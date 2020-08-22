@@ -3,131 +3,40 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager current;
+    public static AudioManager instance;
 
-    [Header("Music")]
-    public AudioClip levelMusic;
-    public AudioClip MenuMusic;
-    public AudioClip gameoverMusic;
-    public AudioClip victoryMusic;
-    [Header("Player")]
-    public AudioClip jump;
-    public AudioClip coinPickup;
-    public AudioClip hitHurt;
-    public AudioClip heartPickup;
-    public AudioClip extaLifePickup;
-    public AudioClip skullPickup;
-    [Header("Mixer")]
-    public AudioMixerGroup musicGroup;
-    public AudioMixerGroup playerGroup;
+    public AudioSource[] soundEffects;
 
-    AudioSource music, player;
+    public AudioSource bgm, levelEndMusic, bossMusic;
 
-    void Awake()
+    private void Awake()
     {
-        if (current != null && current != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        current = this;
+        instance = this;
+    }
+    public void PlaySFX(int soundToPlay)
+    {
+        soundEffects[soundToPlay].Stop();
 
-        music = gameObject.AddComponent<AudioSource>();
-        player = gameObject.AddComponent<AudioSource>();
+        soundEffects[soundToPlay].pitch = Random.Range(.9f, 1.1f);
 
-        music.outputAudioMixerGroup = musicGroup;
-        player.outputAudioMixerGroup = playerGroup;
-        PlayLevelMusic();
+        soundEffects[soundToPlay].Play();
     }
 
-   public void PlayLevelMusic()
+    public void EndLevelVictoryMusic()
     {
-        current.music.clip = current.levelMusic;
-        current.music.loop = true;
-        current.music.Play();
+        bgm.Stop();
+        levelEndMusic.Play();
     }
 
-    public void PlayMenuMusic()
+    public void PlayBossMusic()
     {
-        if (current == null)
-            return;
-
-        current.music.Stop();
-        current.music.clip = current.MenuMusic;
-        current.music.Play();
+        bgm.Stop();
+        bossMusic.Play();
     }
-
-    public void PlayGameoverMusic()
+    public void StopBossMusic()
     {
-        if (current == null)
-            return;
-
-        current.music.Stop();
-        current.music.clip = current.gameoverMusic;
-        current.music.Play();
-    }
-
-    public void PlayVictoryMusic()
-    {
-        if (current == null)
-            return;
-
-        current.music.Stop();
-        current.music.clip = current.victoryMusic;
-        current.music.Play();
-    }
-
-    public void PlayJumpAudio()
-    {
-        if (current == null)
-            return;
-
-        current.player.clip = current.jump;
-        current.player.Play();
-    }
-
-
-    public void PlayextaLifeAudio()
-    {
-        if (current == null)
-            return;
-
-        current.player.clip = current.extaLifePickup;
-        current.player.Play();
-    }
-    public void PlayCoinAudio()
-    {
-        if (current == null)
-            return;
-
-        current.player.clip = current.coinPickup;
-        current.player.Play();
-    }
-
-    public void PlayHeartPickupAudio()
-    {
-        if (current == null)
-            return;
-
-        current.player.clip = current.heartPickup;
-        current.player.Play();
-    }
-
-    public void PlaySkullPickupAudio()
-    {
-        if (current == null)
-            return;
-
-        current.player.clip = current.skullPickup;
-        current.player.Play();
-    }
-    public void PlayHitHurtAudio()
-    {
-        if (current == null)
-            return;
-
-        current.player.clip = current.hitHurt;
-        current.player.Play();
+        bossMusic.Play();
+        bgm.Stop();
     }
 }
 

@@ -18,8 +18,8 @@ public class HeathPickup : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            thelevelManager.GiveHeath(healthToGive);
-            audioManager.PlayHeartPickupAudio();
+            //thelevelManager.GiveHeath(healthToGive);
+           // audioManager.PlayHeartPickupAudio();
             gameObject.SetActive(false); 
         }
     }

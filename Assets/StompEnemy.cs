@@ -3,21 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StompEnemy : MonoBehaviour
-{ 
+{
+    public GameObject deathEffect;
+
+    public GameObject Collectable;
+
+    [Range(0, 100)]
+    public float chanceToDrop;
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {
-            FindObjectOfType<EnemyHealth>().TakeDamage();
-        }
-        if (other.tag =="Boss1")
-        {
-            FindObjectOfType<Boss1>().BossDamage();
-        }
+            other.transform.parent.gameObject.SetActive(false);
+            Instantiate(deathEffect, other.transform.position, other.transform.rotation);
 
-        if (other.tag == "Boss2")
-        {
-            FindObjectOfType<Boss2>().BossDamage();
+            PlayerController.instance.Bounce();
+
+            float dropSelect = Random.Range(0, 100);
+
+            if (dropSelect <= chanceToDrop)
+            {
+                Instantiate(Collectable, other.transform.position, other.transform.rotation);
+            }
+            //AudioManager.instance.PlaySFX();
         }
     }
+}
 }

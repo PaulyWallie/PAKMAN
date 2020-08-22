@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 167394827454013854}
   - component: {fileID: 167394827454013852}
   - component: {fileID: 608529715169620192}
-  - component: {fileID: 167394827454013853}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -220,35 +219,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.4, y: 2}
   m_Direction: 0
---- !u!114 &167394827454013853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167394827454013843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937cf55515530074eaa6c9ab4106c4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  canMove: 0
-  jumpSpeed: 10
-  jumpTime: 0.2
-  bounceForce: 8
-  groundCheck: {fileID: 167394826244874526}
-  groundCheckRadius: 0.25
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  isGrounded: 0
-  myRigidBody: {fileID: 0}
-  respawnPosition: {x: 0, y: 0}
-  knockbackForce: 5
-  knockbackLeagth: 0.2
-  inviaibiltyLength: 0
-  onPlatformSpeedModifier: 0.5
 --- !u!1 &8563982869577302147
 GameObject:
   m_ObjectHideFlags: 0

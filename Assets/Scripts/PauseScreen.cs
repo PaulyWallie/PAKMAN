@@ -42,8 +42,8 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 0;
 
         thePauseScreen.SetActive(true);
-        thePlayer.canMove = false;
-        AudioManager.current.PlayMenuMusic();
+       // thePlayer.canMove = false;
+        //AudioManager.current.PlayMenuMusic();
     }
 
     public void ResumeGame()
@@ -51,14 +51,14 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 1;
 
         thePauseScreen.SetActive(false);
-        thePlayer.canMove = true;
-        AudioManager.current.PlayLevelMusic();
+        //thePlayer.canMove = true;
+        //AudioManager.current.PlayLevelMusic();
     }
 
     public void LevelSelect()
     {
-        PlayerPrefs.SetInt("CoinCount", theLevelManager.coinCount);
-        PlayerPrefs.SetInt("PlayerLives", theLevelManager.currentLives);
+       // PlayerPrefs.SetInt("CoinCount", theLevelManager.coinCount);
+        //PlayerPrefs.SetInt("PlayerLives", theLevelManager.currentLives);
 
         Time.timeScale = 1f;
         SceneManager.LoadScene(levelSelect);

@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.current.PlayMenuMusic();
+       // AudioManager.current.PlayMenuMusic();
     }
 
     public void NewGame()
@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
 
         PlayerPrefs.SetInt("CoinCount", 0);
         PlayerPrefs.SetInt("PlayerLives", startingLives);
-        AudioManager.current.PlayLevelMusic();
+        //AudioManager.current.PlayLevelMusic();
     }
 
     public void Continue()

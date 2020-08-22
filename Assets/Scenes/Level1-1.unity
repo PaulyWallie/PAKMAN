@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26327224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89367604, y: -2.9932556, z: -10}
+  m_LocalPosition: {x: 0.88579106, y: -2.9932613, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -900,6 +900,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67dae15f53e7b164887a5f798caba630, type: 3}
+--- !u!1 &492639598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 167394827454013843, guid: 76f60efc919e9c8489129a7c0f648b39,
+    type: 3}
+  m_PrefabInstance: {fileID: 608529714334859440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &492639599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492639598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937cf55515530074eaa6c9ab4106c4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 12
+  jumpForce: 12
+  theRB: {fileID: 492639602}
+  checkGroundPoint: {fileID: 1202251173}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  knockBackLength: 0.5
+  knockBackForce: 2
+  bounceForce: 2
+  stopInput: 0
+--- !u!50 &492639602 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 167394827454013854, guid: 76f60efc919e9c8489129a7c0f648b39,
+    type: 3}
+  m_PrefabInstance: {fileID: 608529714334859440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &494111981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 731942068264417014, guid: 8512c21dd1091854bb48d6d781db3611,
@@ -2789,6 +2824,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 67dae15f53e7b164887a5f798caba630,
     type: 3}
   m_PrefabInstance: {fileID: 1239880650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1202251173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 167394826244874526, guid: 76f60efc919e9c8489129a7c0f648b39,
+    type: 3}
+  m_PrefabInstance: {fileID: 608529714334859440}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1214081997 stripped
 Transform:
@@ -9082,10 +9123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 167394827454013853, guid: 76f60efc919e9c8489129a7c0f648b39,
+    - target: {fileID: 608529715169620192, guid: 76f60efc919e9c8489129a7c0f648b39,
         type: 3}
-      propertyPath: bounceForce
-      value: 8
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}

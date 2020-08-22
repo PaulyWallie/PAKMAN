@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3933123850120705912}
   - component: {fileID: 3933123850120705913}
   - component: {fileID: 3933123850120705918}
-  - component: {fileID: 3933123850120705919}
+  - component: {fileID: 1902335712224522702}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Checkpoint
@@ -97,7 +97,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3933123850120705919
+--- !u!114 &1902335712224522702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

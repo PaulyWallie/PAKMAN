@@ -4,31 +4,34 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    public Sprite TorchUnlit;
-    public Sprite TorchLit;
+    public static CheckpointController instance;
 
-    private SpriteRenderer theSpriteRenderer;
+    private Checkpoint[] checkpoints;
 
-    public bool checkpointActive;
+    public Vector2 spawnPoint;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        theSpriteRenderer = GetComponent<SpriteRenderer>(); 
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        checkpoints = FindObjectsOfType<Checkpoint>();
+
+        spawnPoint = PlayerController.instance.transform.position;
     }
 
-     void OnTriggerEnter2D(Collider2D other)
+    public void DeactivateCheckpoints()
     {
-        if (other.tag == "Player")
+        for (int i = 0; i < checkpoints.Length; i++)
         {
-            theSpriteRenderer.sprite = TorchLit;
-            checkpointActive = true;
-        }        
+            checkpoints[i].ResetCheckpoint();
+        }
+    }
+
+    public void SetSpawnPoint(Vector2 newSpawnPoint)
+    {
+        spawnPoint = newSpawnPoint;
     }
 }
