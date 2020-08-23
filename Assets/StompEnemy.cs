@@ -17,7 +17,7 @@ public class StompEnemy : MonoBehaviour
         if (other.tag == "Enemy")
         {
             other.transform.parent.gameObject.SetActive(false);
-            Instantiate(deathEffect, other.transform.position, other.transform.rotation);
+           /// Instantiate(deathEffect, other.transform.position, other.transform.rotation);
 
             PlayerController.instance.Bounce();
 
@@ -31,4 +31,4 @@ public class StompEnemy : MonoBehaviour
         }
     }
 }
-}
+

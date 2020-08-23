@@ -5,21 +5,23 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     public float moveSpeed;
-    public float jumpForce;
     public Rigidbody2D theRB;
+    public float jumpForce;
 
     private bool isGrounded;
-    public Transform checkGroundPoint;
+    public Transform groundCheckPoint;
     public LayerMask whatIsGround;
 
     private bool canDoupleJump;
+
     private SpriteRenderer theSR;
-
     private Animator anim;
-    public float knockBackLength, knockBackForce;
-    private float knockBackCounter;
-    public float bounceForce;
 
+    public float knockBackLength, knockBackForce;
+    private float knockBackCounter; 
+
+    public float bounceForce;
+        
     public bool stopInput;
 
     private void Awake()
@@ -35,18 +37,18 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (knockBackCounter<= 0)
+        if (knockBackCounter <= 0)
         {
             theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
 
-            isGrounded = Physics2D.OverlapCircle(checkGroundPoint.position, .2f, whatIsGround);
+            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
             if (isGrounded)
             {
                 canDoupleJump = true;
             }
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
                 if (isGrounded)
                 {
@@ -64,7 +66,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (theRB .velocity.x < 0)
+            if (theRB.velocity.x < 0)
             {
                 theSR.flipX = true;
             }
@@ -74,7 +76,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                knockBackForce -= Time.deltaTime;
+                knockBackCounter -= Time.deltaTime;
                 if (!theSR.flipX)
                 {
                     theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
@@ -91,8 +93,9 @@ public class PlayerController : MonoBehaviour
     }
     public void KnockBack()
     {
-        knockBackLength = knockBackCounter;
+        knockBackCounter = knockBackLength;
         theRB.velocity = new Vector2(0f, knockBackForce);
+
 
         anim.SetTrigger("Hurt");
     }

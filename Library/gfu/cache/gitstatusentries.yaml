@@ -1,0 +1,414 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 6
+  lastUpdatedAtString: 2020-08-23T00:18:17.038-04:00
+  initializedAtString: 2020-08-22T23:55:34.622-04:00
+  entries:
+  - path: .vs\Pakman\v15\.suo
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\.vs\Pakman\v15\.suo
+    projectPath: .vs\Pakman\v15\.suo
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: .vs\Pakman\v15\Server\sqlite3\storage.ide-shm
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\.vs\Pakman\v15\Server\sqlite3\storage.ide-shm
+    projectPath: .vs\Pakman\v15\Server\sqlite3\storage.ide-shm
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: .vs\Pakman\v15\Server\sqlite3\storage.ide-wal
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\.vs\Pakman\v15\Server\sqlite3\storage.ide-wal
+    projectPath: .vs\Pakman\v15\Server\sqlite3\storage.ide-wal
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assembly-CSharp-Editor.csproj
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assembly-CSharp-Editor.csproj
+    projectPath: Assembly-CSharp-Editor.csproj
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assembly-CSharp-Editor-firstpass.csproj
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assembly-CSharp-Editor-firstpass.csproj
+    projectPath: Assembly-CSharp-Editor-firstpass.csproj
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Animations\Player\player.controller
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\Animations\Player\player.controller
+    projectPath: Assets\Animations\Player\player.controller
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Prefebs\Interactive\Checkpoint.prefab
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\Prefebs\Interactive\Checkpoint.prefab
+    projectPath: Assets\Prefebs\Interactive\Checkpoint.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Prefebs\Player.prefab
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\Prefebs\Player.prefab
+    projectPath: Assets\Prefebs\Player.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Scripts\PlayerController.cs
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\Scripts\PlayerController.cs
+    projectPath: Assets\Scripts\PlayerController.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\StompEnemy.cs
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Assets\StompEnemy.cs
+    projectPath: Assets\StompEnemy.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\assetDatabase3
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\assetDatabase3
+    projectPath: Library\assetDatabase3
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\CurrentLayout.dwlt
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\CurrentLayout.dwlt
+    projectPath: Library\CurrentLayout.dwlt
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\EditorInstance.json
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\expandedItems
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\expandedItems
+    projectPath: Library\expandedItems
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\gfu\cache\gitlocks.yaml
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\gfu\cache\gitlocks.yaml
+    projectPath: Library\gfu\cache\gitlocks.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\gfu\cache\repoinfo.yaml
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\InspectorExpandedItems.asset
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\00\00000000000000003000000000000000
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\00\00000000000000003000000000000000
+    projectPath: Library\metadata\00\00000000000000003000000000000000
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\00\00000000000000009000000000000000
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\00\00000000000000009000000000000000
+    projectPath: Library\metadata\00\00000000000000009000000000000000
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\00\0000000000000000a100000000000000
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\00\0000000000000000a100000000000000
+    projectPath: Library\metadata\00\0000000000000000a100000000000000
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\37\3754a9ebaaf19564a88eba694d3a338e
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\37\3754a9ebaaf19564a88eba694d3a338e
+    projectPath: Library\metadata\37\3754a9ebaaf19564a88eba694d3a338e
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+    projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\76\76f60efc919e9c8489129a7c0f648b39
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\76\76f60efc919e9c8489129a7c0f648b39
+    projectPath: Library\metadata\76\76f60efc919e9c8489129a7c0f648b39
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\93\937cf55515530074eaa6c9ab4106c4f9
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\93\937cf55515530074eaa6c9ab4106c4f9
+    projectPath: Library\metadata\93\937cf55515530074eaa6c9ab4106c4f9
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+    projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\f0\f0f47bc366fd8bf4591c19c91350a8f3
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\f0\f0f47bc366fd8bf4591c19c91350a8f3
+    projectPath: Library\metadata\f0\f0f47bc366fd8bf4591c19c91350a8f3
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\f3\f3f44fca14dc6214985ae6ba8868d058
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\f3\f3f44fca14dc6214985ae6ba8868d058
+    projectPath: Library\metadata\f3\f3f44fca14dc6214985ae6ba8868d058
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\metadata\f3\f3f44fca14dc6214985ae6ba8868d058.info
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\metadata\f3\f3f44fca14dc6214985ae6ba8868d058.info
+    projectPath: Library\metadata\f3\f3f44fca14dc6214985ae6ba8868d058.info
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Assembly-CSharp.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Assembly-CSharp.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\ScriptAssemblies\Assembly-CSharp.pdb
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Assembly-CSharp.pdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor.pdb
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Assembly-CSharp-Editor.pdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.pdb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    projectPath: Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\ScriptAssemblies\Cinemachine.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Cinemachine.dll
+    projectPath: Library\ScriptAssemblies\Cinemachine.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+    projectPath: Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+    projectPath: Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\Hierarchy\21b3e6-76f60efc919e9c8489.json
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\StateCache\Hierarchy\21b3e6-76f60efc919e9c8489.json
+    projectPath: Library\StateCache\Hierarchy\21b3e6-76f60efc919e9c8489.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\Hierarchy\21b3e6-f3f44fca14dc621498.json
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\StateCache\Hierarchy\21b3e6-f3f44fca14dc621498.json
+    projectPath: Library\StateCache\Hierarchy\21b3e6-f3f44fca14dc621498.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\Hierarchy\21b3e6-mainStage.json
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\StateCache\Hierarchy\21b3e6-mainStage.json
+    projectPath: Library\StateCache\Hierarchy\21b3e6-mainStage.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\SceneView\92d993-76f60efc919e9c8489.json
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\StateCache\SceneView\92d993-76f60efc919e9c8489.json
+    projectPath: Library\StateCache\SceneView\92d993-76f60efc919e9c8489.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\SceneView\92d993-mainStage.json
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Library\StateCache\SceneView\92d993-mainStage.json
+    projectPath: Library\StateCache\SceneView\92d993-mainStage.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache
+    projectPath: obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+    projectPath: obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: obj\Debug\Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\obj\Debug\Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
+    projectPath: obj\Debug\Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    projectPath: obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ProjectSettings\QualitySettings.asset
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\ProjectSettings\QualitySettings.asset
+    projectPath: ProjectSettings\QualitySettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ProjectSettings\TagManager.asset
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\ProjectSettings\TagManager.asset
+    projectPath: ProjectSettings\TagManager.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ProjectSettings\UnityConnectSettings.asset
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\ProjectSettings\UnityConnectSettings.asset
+    projectPath: ProjectSettings\UnityConnectSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Temp\__Backupscenes\0.backup
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\__Backupscenes\0.backup
+    projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityLockfile
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityLockfile
+    projectPath: Temp\UnityLockfile
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityTempFile-0ebd0b974071cce49a88f3eb52743d77
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityTempFile-0ebd0b974071cce49a88f3eb52743d77
+    projectPath: Temp\UnityTempFile-0ebd0b974071cce49a88f3eb52743d77
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityTempFile-4112368c6ff30bc43a9cd2c399fd65e5
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityTempFile-4112368c6ff30bc43a9cd2c399fd65e5
+    projectPath: Temp\UnityTempFile-4112368c6ff30bc43a9cd2c399fd65e5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityTempFile-72ab46f68fef87641b656e26aef6781f
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityTempFile-72ab46f68fef87641b656e26aef6781f
+    projectPath: Temp\UnityTempFile-72ab46f68fef87641b656e26aef6781f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityTempFile-915666ddfaa646f4bbef67b1131f3f18
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityTempFile-915666ddfaa646f4bbef67b1131f3f18
+    projectPath: Temp\UnityTempFile-915666ddfaa646f4bbef67b1131f3f18
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityTempFile-addec8cf44882384084cd332dc0674d7
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityTempFile-addec8cf44882384084cd332dc0674d7
+    projectPath: Temp\UnityTempFile-addec8cf44882384084cd332dc0674d7
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp\UnityTempFile-d046b2663fd18ec479766402dc819679
+    fullPath: C:\Users\Paul\Documents\GitHub\PAKMAN\Temp\UnityTempFile-d046b2663fd18ec479766402dc819679
+    projectPath: Temp\UnityTempFile-d046b2663fd18ec479766402dc819679
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1

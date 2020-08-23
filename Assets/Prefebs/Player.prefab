@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 167394826244874526}
   - component: {fileID: 167394826244874527}
   m_Layer: 9
-  m_Name: GroundCheck
+  m_Name: GroundPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,3 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3754a9ebaaf19564a88eba694d3a338e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 0}
+  Collectable: {fileID: 0}
+  chanceToDrop: 0

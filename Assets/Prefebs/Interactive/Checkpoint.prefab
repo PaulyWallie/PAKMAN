@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3933123850120705912}
   - component: {fileID: 3933123850120705913}
   - component: {fileID: 3933123850120705918}
-  - component: {fileID: 1902335712224522702}
+  - component: {fileID: 8359172197007412840}
   m_Layer: 0
   m_Name: Checkpoint
-  m_TagString: Checkpoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1902335712224522702
+--- !u!114 &8359172197007412840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,9 +106,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3933123850120705916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5aad6b11b7efd84fad3d6af44faabdb, type: 3}
+  m_Script: {fileID: 11500000, guid: 85f0d3b8faf69654b83d54ae8aa61490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TorchUnlit: {fileID: 21300014, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
-  TorchLit: {fileID: 21300016, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
-  checkpointActive: 0
+  theSR: {fileID: 3933123850120705913}
+  cpOn: {fileID: 21300016, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
+  cpOff: {fileID: 21300014, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}

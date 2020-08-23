@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Checkpoint
-  - MovingPlatform
   - Enemy
-  - Boss1
-  - Boss2
+  - 'Platform '
   layers:
   - Default
   - TransparentFX
@@ -20,8 +17,8 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
-  - 
+  - Platform
+  - StompBox
   - 
   - 
   - 
@@ -43,14 +40,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
+  - name: BG
     uniqueID: 1926967269
     locked: 0
-  - name: World Objects
+  - name: 'World '
     uniqueID: 3283511325
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Effects
+    uniqueID: 1570840581
+    locked: 0
+  - name: Pickups
+    uniqueID: 3071381791
+    locked: 0
+  - name: Enemies
+    uniqueID: 3128096561
     locked: 0
   - name: Player
     uniqueID: 1616416647
