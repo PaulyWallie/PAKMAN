@@ -11,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 1611343397, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: GitHub.Unity.45.dll::GitHub.Unity.GitAheadBehindCache
   cacheType: 5
-  lastUpdatedAtString: 2020-08-22T23:55:34.648-04:00
-  initializedAtString: 2020-08-22T23:55:34.648-04:00
+  lastUpdatedAtString: 2025-12-21T19:48:24.049-05:00
+  initializedAtString: 2025-12-21T19:45:30.037-05:00
   ahead: 0
   behind: 0

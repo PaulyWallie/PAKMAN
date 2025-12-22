@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
     public static CheckpointController instance;
-
-    private Checkpoint[] checkpoints;
-
+    Checkpoint[] checkpoints;
     public Vector2 spawnPoint;
 
     private void Awake()

@@ -32,13 +32,11 @@ public class SlimeController : MonoBehaviour
         }
         if (movingRight)
         {
-            myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0);
+            myRigidBody.linearVelocity = new Vector3(moveSpeed, myRigidBody.linearVelocity.y, 0);
         }
         else
         {
-            myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0);
+            myRigidBody.linearVelocity = new Vector3(-moveSpeed, myRigidBody.linearVelocity.y, 0);
         }
     }
 }
-
-

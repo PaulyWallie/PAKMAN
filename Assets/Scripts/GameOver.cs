@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-
     public string levelSelect;
     public string mainMenu;
 
-    private LevelManager theLevelManager;
+     LevelManager theLevelManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +20,6 @@ public class GameOver : MonoBehaviour
     {
         PlayerPrefs.SetInt("CoinCount", 0);
       //  PlayerPrefs.SetInt("PlayerLives", theLevelManager.startingLives);
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

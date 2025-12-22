@@ -10,16 +10,16 @@ public class LevelManager : MonoBehaviour
 
     public float timeInLevel;
 
-    private void Awake()
+     void Awake()
     {
         instance = this;
     }
 
-    private void Start()
+     void Start()
     {
         timeInLevel = 0f;
     }
-    private void Update()
+     void Update()
     {
         timeInLevel += Time.deltaTime;
     }
@@ -52,9 +52,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.stopInput = true;
 
         yield return new WaitForSeconds(2f);
-
     }
-
 }
 
 

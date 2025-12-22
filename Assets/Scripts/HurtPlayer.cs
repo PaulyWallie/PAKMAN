@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour
 {
@@ -16,7 +14,7 @@ public class HurtPlayer : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {

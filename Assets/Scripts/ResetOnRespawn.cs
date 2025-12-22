@@ -5,12 +5,12 @@ using UnityEngine;
 public class ResetOnRespawn : MonoBehaviour
 {
 
-    private Vector3 startPosition;
-    private Quaternion startRotation;
-    private Vector3 startLocalScale;
+     Vector3 startPosition;
+     Quaternion startRotation;
+     Vector3 startLocalScale;
 
-    private Rigidbody2D myRigidBody;
-    // Start is called before the first frame update
+     Rigidbody2D myRigidBody;
+    
     void Start()
     {
         startPosition = transform.position;
@@ -22,23 +22,18 @@ public class ResetOnRespawn : MonoBehaviour
             myRigidBody = GetComponent<Rigidbody2D>();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void ResetObect()
     {
-        FindObjectOfType<EnemyHealth>().ResetHealth();
+       // FindObjectOfType<EnemyHealth>().ResetHealth();
         transform.position = startPosition;
         transform.rotation = startRotation;
         transform.localScale = startLocalScale;
 
         if (myRigidBody != null)
         {
-            myRigidBody.velocity = Vector3.zero;
+            myRigidBody.linearVelocity = Vector3.zero;
         }
     }
 }
