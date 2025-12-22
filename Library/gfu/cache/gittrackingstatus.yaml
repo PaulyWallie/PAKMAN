@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GitHub.Unity.45.dll::GitHub.Unity.GitAheadBehindCache
   cacheType: 5
-  lastUpdatedAtString: 2025-12-21T19:48:24.049-05:00
-  initializedAtString: 2025-12-21T19:45:30.037-05:00
+  lastUpdatedAtString: 2025-12-22T09:08:42.588-05:00
+  initializedAtString: 2025-12-22T08:47:24.399-05:00
   ahead: 0
   behind: 0

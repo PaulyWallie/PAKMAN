@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - 'Ground '
+  - Player
+  - Platform
+  - StompBox
   - 
   - 
   - 
@@ -38,6 +40,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1901436445
+    locked: 0
+  - name: World
+    uniqueID: 2811402425
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Effects
+    uniqueID: 2185382679
+    locked: 0
+  - name: Pickup
+    uniqueID: 1566482495
+    locked: 0
+  - name: Enemies
+    uniqueID: 1570854617
+    locked: 0
+  - name: Player
+    uniqueID: 3203244447
+    locked: 0
+  m_RenderingLayers:
+  - Default
