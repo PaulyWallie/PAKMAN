@@ -69,7 +69,9 @@
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\ResetOnRespawn.cs" />
     <Compile Include="Assets\Scripts\StompBox.cs" />
+    <None Include="Assets\UI Toolkit\GameplayUI.uxml" />
     <None Include="Assets\Resources\BillingMode.json" />
+    <None Include="Assets\UI Toolkit\Gameplay.uss" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
