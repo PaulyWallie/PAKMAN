@@ -1103,8 +1103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &449585655
 Animator:
   serializedVersion: 7
@@ -1752,8 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &542216711
 Animator:
   serializedVersion: 7
@@ -2837,8 +2833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &642957670
 Animator:
   serializedVersion: 7
@@ -4028,9 +4022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e9a01bdab7adf4abf328b29295696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 2
-  audioManager: {fileID: 0}
-  thelevelManager: {fileID: 0}
 --- !u!58 &1037246291
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4271,8 +4262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1157077065
 Animator:
   serializedVersion: 7
@@ -4428,8 +4417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1171254989
 Animator:
   serializedVersion: 7
@@ -4661,8 +4648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1244331622
 Animator:
   serializedVersion: 7
@@ -5026,8 +5011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1279422598
 Animator:
   serializedVersion: 7
@@ -5426,9 +5409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e9a01bdab7adf4abf328b29295696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 2
-  audioManager: {fileID: 0}
-  thelevelManager: {fileID: 0}
 --- !u!58 &1362481068
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5817,9 +5797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e9a01bdab7adf4abf328b29295696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 2
-  audioManager: {fileID: 0}
-  thelevelManager: {fileID: 0}
 --- !u!58 &1388573968
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6020,8 +5997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1406389021
 Animator:
   serializedVersion: 7
@@ -6177,8 +6152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1408124626
 Animator:
   serializedVersion: 7
@@ -6915,8 +6888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1556388872
 Animator:
   serializedVersion: 7
@@ -7138,9 +7109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e9a01bdab7adf4abf328b29295696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 2
-  audioManager: {fileID: 0}
-  thelevelManager: {fileID: 0}
 --- !u!58 &1582317467
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7484,8 +7452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1664583613
 Animator:
   serializedVersion: 7
@@ -7656,8 +7622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1669607635
 Animator:
   serializedVersion: 7
@@ -7885,8 +7849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1699043714
 Animator:
   serializedVersion: 7
@@ -8048,8 +8010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1700998160
 Animator:
   serializedVersion: 7
@@ -8211,8 +8171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1701108518
 Animator:
   serializedVersion: 7
@@ -8599,8 +8557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1721728095
 Animator:
   serializedVersion: 7
@@ -8749,9 +8705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0378c8148ca53e34da75d7ee88a34a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  livesToGive: 1
-  theLevelManager: {fileID: 0}
-  AudioManager: {fileID: 0}
 --- !u!95 &1727958852
 Animator:
   serializedVersion: 7
@@ -8984,8 +8937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1764786155
 Animator:
   serializedVersion: 7
@@ -9413,8 +9364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1788377691
 Animator:
   serializedVersion: 7
@@ -9631,8 +9580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1838848155
 Animator:
   serializedVersion: 7
@@ -13734,8 +13681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1869869971
 Animator:
   serializedVersion: 7
@@ -13891,8 +13836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1906143106
 Animator:
   serializedVersion: 7
@@ -14048,8 +13991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1913353457
 Animator:
   serializedVersion: 7
@@ -14266,8 +14207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &1944308851
 Animator:
   serializedVersion: 7
@@ -14640,8 +14579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &2013778861
 Animator:
   serializedVersion: 7
@@ -14884,9 +14821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e9a01bdab7adf4abf328b29295696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 2
-  audioManager: {fileID: 0}
-  thelevelManager: {fileID: 0}
 --- !u!58 &2024255192
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15138,8 +15072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &2063279539
 Animator:
   serializedVersion: 7
@@ -15356,8 +15288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &2122101493
 Animator:
   serializedVersion: 7
@@ -15519,8 +15449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ab6a211ce8f4fa36b3ccced48d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theLevelManager: {fileID: 0}
-  coinValue: 1
 --- !u!95 &2135628030
 Animator:
   serializedVersion: 7
@@ -15886,6 +15814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3488201676390841662, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3488201676508222999, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -15974,6 +15906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3488201676644055310, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7877229173920532062, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
       propertyPath: heartFull
       value: 
@@ -15986,8 +15922,15 @@ PrefabInstance:
       propertyPath: heartEmpty
       value: 
       objectReference: {fileID: 21300022, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
+    - target: {fileID: 8313925804914998696, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3488201676390841662, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
+    - {fileID: 8313925804914998696, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
+    - {fileID: 3488201677335783614, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3018645c06b9ba64698b6460dcd30c92, type: 3}
