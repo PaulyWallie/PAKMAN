@@ -17,8 +17,8 @@ public class PauseScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        theLevelManager = FindObjectOfType<LevelManager>();
-        thePlayer = FindObjectOfType<PlayerController>();
+        theLevelManager = FindFirstObjectByType<LevelManager>();
+        thePlayer = FindFirstObjectByType<PlayerController>();
     }
 
     // Update is called once per frame

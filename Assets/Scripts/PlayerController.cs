@@ -134,8 +134,7 @@ public class PlayerController : MonoBehaviour
     {
         knockBackCounter = knockBackLength;
         rb.linearVelocity = new Vector2(0f, knockBackForce);
-
-        anim.SetTrigger("Hurt");
+       // anim.SetTrigger("Hurt");
     }
 
     public void Bounce()

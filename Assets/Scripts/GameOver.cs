@@ -13,7 +13,7 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        theLevelManager = FindObjectOfType<LevelManager>();
+        theLevelManager = FindFirstObjectByType<LevelManager>();
     }
 
     public void Restart()

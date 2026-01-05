@@ -3,31 +3,43 @@
 public class CheckpointController : MonoBehaviour
 {
     public static CheckpointController instance;
-    Checkpoint[] checkpoints;
+    [Header("Checkpoint Settings")] Checkpoint[] checkpoints;
     public Vector2 spawnPoint;
 
     private void Awake()
     {
-        instance = this;
+        if (instance)
+            instance = this;
+        else if (instance != this)
+        {
+            Debug.LogWarning("There must be one instance of CheckpointController");
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        checkpoints = FindObjectsOfType<Checkpoint>();
-
-        spawnPoint = PlayerController.instance.transform.position;
+        checkpoints = FindObjectsByType<Checkpoint>(FindObjectsSortMode.None);
+        if (PlayerController.instance)
+            spawnPoint = PlayerController.instance.transform.position;
+        else
+            Debug.LogError("PlayerController instance is null");
     }
 
     public void DeactivateCheckpoints()
     {
-        for (int i = 0; i < checkpoints.Length; i++)
+        if (checkpoints.Length > 0)
         {
-            checkpoints[i].ResetCheckpoint();
+            foreach (Checkpoint checkpoint in checkpoints)
+                checkpoint.ResetCheckpoint();
         }
+        else
+            Debug.LogError("There are no checkpoints to deactivate");
     }
 
     public void SetSpawnPoint(Vector2 newSpawnPoint)
     {
         spawnPoint = newSpawnPoint;
+        Debug.Log($"spawn pont updated to {spawnPoint}");
     }
 }

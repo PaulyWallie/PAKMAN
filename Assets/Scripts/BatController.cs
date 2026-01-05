@@ -11,7 +11,7 @@ public class BatController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thePlayer = FindObjectOfType<PlayerController>();
+        thePlayer = FindFirstObjectByType<PlayerController>();
     }
 
     // Update is called once per frame
