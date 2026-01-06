@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void OnEnable()
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
     }
     void HandleMovement()
     {
-        rb.linearVelocity = new Vector2(moveSpeed * moveInput.x, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(moveSpeed * moveInput.x, 0);
 
         if (moveInput.x < 0)
         {

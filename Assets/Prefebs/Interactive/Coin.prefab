@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5210322263182064585}
   - component: {fileID: 4374583233971066295}
   - component: {fileID: 5333697739561464418}
-  - component: {fileID: 3691380995937113367}
+  - component: {fileID: -2487365282118758800}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1011455971
-  m_SortingLayer: 0
+  m_SortingLayerID: 1566482495
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -151,7 +151,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3691380995937113367
+--- !u!114 &-2487365282118758800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,9 +160,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 276141995751068730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d370e933949d334594f92726fa4c575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
+  pickupType: 0
+  pickupEffect: {fileID: 1175641504906137808, guid: 02569dcecaa01dc489fe5f31bd58615d, type: 3}
