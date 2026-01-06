@@ -12,7 +12,7 @@ public class CheckpointController : MonoBehaviour
             instance = this;
         else if (instance != this)
         {
-            Debug.LogWarning("There must be one instance of CheckpointController");
+            //Debug.LogWarning("There must be one instance of CheckpointController");
             Destroy(gameObject);
         }
     }

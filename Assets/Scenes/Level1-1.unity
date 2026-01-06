@@ -469,6 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -493,7 +494,6 @@ GameObject:
   - component: {fileID: 1771666241}
   - component: {fileID: 1771666240}
   - component: {fileID: 1771666239}
-  - component: {fileID: 1771666238}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -559,6 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -624,6 +625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -689,6 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -843,7 +846,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960907520517548419, guid: b19ebace71722dc4ea7b519d2bea4b22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -860,7 +864,6 @@ GameObject:
   - component: {fileID: 494111985}
   - component: {fileID: 494111984}
   - component: {fileID: 494111983}
-  - component: {fileID: 494111982}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -920,6 +923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 8359172197007412840, guid: f3f44fca14dc6214985ae6ba8868d058, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 1463398738}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -988,6 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1012,9 +1020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &452481583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -1078,6 +1083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1105,19 +1111,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 618358412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &494111982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 731942068264416970, guid: 8512c21dd1091854bb48d6d781db3611, type: 3}
-  m_PrefabInstance: {fileID: 1585348465}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407340988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce64e6862d9e5b4d81851cc63bf0413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skullValue: 1
 --- !u!58 &494111983
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1292,6 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1357,6 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1380,7 +1375,6 @@ GameObject:
   - component: {fileID: 1362481065}
   - component: {fileID: 1362481069}
   - component: {fileID: 1362481068}
-  - component: {fileID: 1362481070}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -1451,6 +1445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1475,9 +1470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &542679321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +1990,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Holder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2531332619886095399, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2101,6 +2094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2289,7 +2283,6 @@ GameObject:
   - component: {fileID: 1438118631}
   - component: {fileID: 1438118630}
   - component: {fileID: 1438118629}
-  - component: {fileID: 1438118628}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -2357,7 +2350,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2379,9 +2373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &644068647 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 276141995751068730, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -2796,10 +2787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba0619327fc8454eaf9850116e47abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIController
-  heartFull: {fileID: 21300018, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
-  heartEmpty: {fileID: 21300022, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
-  heartHalf: {fileID: 21300020, guid: 04b145a19bcfcdf4b8513e9731128f58, type: 3}
-  fadeSpeed: 0
 --- !u!1001 &788429813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2858,6 +2845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2923,6 +2911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2942,7 +2931,6 @@ GameObject:
   - component: {fileID: 798878742}
   - component: {fileID: 798878741}
   - component: {fileID: 798878740}
-  - component: {fileID: 798878739}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -2950,19 +2938,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &798878739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 731942068264416970, guid: 8512c21dd1091854bb48d6d781db3611, type: 3}
-  m_PrefabInstance: {fileID: 1505873317}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798878738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce64e6862d9e5b4d81851cc63bf0413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skullValue: 1
 --- !u!58 &798878740
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3162,6 +3137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3227,6 +3203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3297,6 +3274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3371,7 +3349,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5002977819434681616, guid: 78895420cc7cdb74484f11454a7d15b5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1464014932}
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 78895420cc7cdb74484f11454a7d15b5, type: 3}
 --- !u!1 &963612628 stripped
 GameObject:
@@ -3389,7 +3367,6 @@ GameObject:
   - component: {fileID: 842693029}
   - component: {fileID: 1037246292}
   - component: {fileID: 1037246291}
-  - component: {fileID: 1037246293}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -3491,21 +3468,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1037246293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037246288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 0
-  isHeal: 1
-  pickupEffect: {fileID: 0}
 --- !u!1001 &1055993461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3583,7 +3545,6 @@ GameObject:
   - component: {fileID: 1388573965}
   - component: {fileID: 1388573969}
   - component: {fileID: 1388573968}
-  - component: {fileID: 1388573970}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -3618,9 +3579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1171254986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -3638,9 +3596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1214081997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -3704,6 +3659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3728,9 +3684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1248152882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3801,6 +3754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 383474169710273707, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
+    - {fileID: 2531332619886095399, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3931,6 +3885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 383474169710273707, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
+    - {fileID: 2531332619886095399, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3957,9 +3912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1320022538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4020,7 +3972,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4081,7 +4034,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960907520517548419, guid: b19ebace71722dc4ea7b519d2bea4b22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4189,6 +4143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4310,21 +4265,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1362481070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532326201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 0
-  isHeal: 1
-  pickupEffect: {fileID: 0}
 --- !u!1 &1380347598
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,7 +4515,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960907520517548419, guid: b19ebace71722dc4ea7b519d2bea4b22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4689,21 +4630,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1388573970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086973865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 0
-  isHeal: 1
-  pickupEffect: {fileID: 0}
 --- !u!1001 &1403353049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4762,6 +4688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4786,9 +4713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1408124623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -4806,9 +4730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1438118627
 Transform:
   m_ObjectHideFlags: 0
@@ -4824,19 +4745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 618358412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1438118628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 731942068264416970, guid: 8512c21dd1091854bb48d6d781db3611, type: 3}
-  m_PrefabInstance: {fileID: 1320022538}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619884501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce64e6862d9e5b4d81851cc63bf0413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skullValue: 1
 --- !u!58 &1438118629
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5013,6 +4921,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3933123850120705912, guid: f3f44fca14dc6214985ae6ba8868d058, type: 3}
   m_PrefabInstance: {fileID: 427223192}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1463398738 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3933123850120705913, guid: f3f44fca14dc6214985ae6ba8868d058, type: 3}
+  m_PrefabInstance: {fileID: 427223192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1464014927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,7 +4937,6 @@ GameObject:
   - component: {fileID: 1253346448}
   - component: {fileID: 1464014931}
   - component: {fileID: 1464014930}
-  - component: {fileID: 1464014932}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -5126,21 +5038,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1464014932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464014927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 0
-  isHeal: 1
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1468652817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -5241,7 +5138,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5302,7 +5200,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960907520517548419, guid: b19ebace71722dc4ea7b519d2bea4b22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5390,9 +5289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1558106780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5451,6 +5347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5469,7 +5366,6 @@ GameObject:
   - component: {fileID: 601013830}
   - component: {fileID: 1582317468}
   - component: {fileID: 1582317467}
-  - component: {fileID: 1582317469}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -5571,21 +5467,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1582317469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582317464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 0
-  isHeal: 1
-  pickupEffect: {fileID: 0}
 --- !u!1001 &1582903298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5644,6 +5525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5711,7 +5593,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5804,9 +5687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1668224138
 Transform:
   m_ObjectHideFlags: 0
@@ -5839,9 +5719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1671613107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5930,9 +5807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &1700998157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 276141995751068730, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -5950,9 +5824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &1701108515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 276141995751068730, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -5970,9 +5841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1709744578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6031,6 +5899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6050,7 +5919,6 @@ GameObject:
   - component: {fileID: 1711368750}
   - component: {fileID: 1711368749}
   - component: {fileID: 1711368748}
-  - component: {fileID: 1711368747}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -6058,19 +5926,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1711368747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 731942068264416970, guid: 8512c21dd1091854bb48d6d781db3611, type: 3}
-  m_PrefabInstance: {fileID: 2091489623}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711368746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce64e6862d9e5b4d81851cc63bf0413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skullValue: 1
 --- !u!58 &1711368748
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6209,9 +6064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &1727958850
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,6 +6204,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3933123850120705912, guid: f3f44fca14dc6214985ae6ba8868d058, type: 3}
   m_PrefabInstance: {fileID: 2051155060}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1746726536 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3933123850120705913, guid: f3f44fca14dc6214985ae6ba8868d058, type: 3}
+  m_PrefabInstance: {fileID: 2051155060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1751135933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6360,10 +6217,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 618358412}
     m_Modifications:
-    - target: {fileID: 451570736232948217, guid: 67dae15f53e7b164887a5f798caba630, type: 3}
-      propertyPath: m_EditorClassIdentifier
-      value: Assembly-CSharp::ResetOnRespawn
-      objectReference: {fileID: 0}
     - target: {fileID: 276141995751068730, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
       propertyPath: m_Name
       value: Coin (18)
@@ -6412,8 +6265,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 451570736232948217, guid: 67dae15f53e7b164887a5f798caba630, type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Assembly-CSharp::ResetOnRespawn
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6443,9 +6301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1771666237
 Transform:
   m_ObjectHideFlags: 0
@@ -6461,19 +6316,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 618358412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1771666238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 731942068264416970, guid: 8512c21dd1091854bb48d6d781db3611, type: 3}
-  m_PrefabInstance: {fileID: 637132646}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188998714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce64e6862d9e5b4d81851cc63bf0413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skullValue: 1
 --- !u!58 &1771666239
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6648,6 +6490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6713,6 +6556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6737,9 +6581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1799419610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6798,6 +6639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6822,9 +6664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &1856224536
 GameObject:
   m_ObjectHideFlags: 0
@@ -10788,9 +10627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1906143103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -10808,9 +10644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!4 &1913353454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5558884861875126726, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -10828,9 +10661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1932717146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10889,6 +10719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -10913,9 +10744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &1965870398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10974,6 +10802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -11065,7 +10894,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Slime Holder '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2531332619886095399, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11126,7 +10956,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960907520517548419, guid: b19ebace71722dc4ea7b519d2bea4b22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11148,9 +10979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &2020091787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11223,7 +11051,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Holder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2531332619886095399, guid: 8cc65ea2b37091f4196a1980616d4f74, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11244,7 +11073,6 @@ GameObject:
   - component: {fileID: 1668224138}
   - component: {fileID: 2024255193}
   - component: {fileID: 2024255192}
-  - component: {fileID: 2024255194}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -11346,21 +11174,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2024255194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024255189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 0
-  isHeal: 1
-  pickupEffect: {fileID: 0}
 --- !u!1001 &2046873107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11413,7 +11226,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3691380995937113367, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11474,6 +11288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 8359172197007412840, guid: f3f44fca14dc6214985ae6ba8868d058, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 1746726536}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11496,9 +11314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &2091489623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11559,7 +11374,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11581,9 +11397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1 &2135628027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 276141995751068730, guid: 769348ad721464d40a4e2898e5cbdc08, type: 3}
@@ -11601,9 +11414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e255b042b09d4e4f868b43b64ec89c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  isCoin: 1
-  isHeal: 0
-  pickupEffect: {fileID: 7317351800959512646, guid: 03c89a4908f54d04bae5cd584e56b35e, type: 3}
 --- !u!1001 &2136925026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11726,11 +11536,33 @@ PrefabInstance:
       propertyPath: bounceForce
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4743265037604010098, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
+      propertyPath: knockBackForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743265037604010098, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
+      propertyPath: knockBackLength
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8563982869577302147, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8779431468013727805, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 5ac88354bafd081498ccacc92b5646f3, type: 3}
+    - target: {fileID: 8779431468013727805, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 3cd463b0-0827-47b1-845f-199d7d73eb82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779431468013727805, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5071736954960700533, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
+    - {fileID: 7299528713438871548, guid: 76f60efc919e9c8489129a7c0f648b39, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

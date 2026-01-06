@@ -7,22 +7,25 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed;
     public float bounceForce;
+    
+    [Header("Jump Settings")]
     public float jumpForce;
-
+    public float jumpForceMultiplier ;
+    
     [Header("Ground Check Settings")]
     public Transform groundCheckPoint;
     public LayerMask whatIsGround;
     [Header("Knockback Settings")]
     public float knockBackLength, knockBackForce;
     public bool stopInput;
-
-
-    public Rigidbody2D rb;
+    
+    Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
 
     Vector2 moveInput;
     bool isGrounded;
+    bool isJumping;
     bool canDoubleJump;
     float knockBackCounter;
     void Awake()
@@ -85,8 +88,7 @@ public class PlayerController : MonoBehaviour
         float knockBackDirection = Mathf.Sign(moveInput.x);
         rb.linearVelocity = new Vector2(knockBackDirection * knockBackForce, rb.linearVelocity.y);
     }
-
-
+    
     void UpdateAnimation()
     {
         anim.SetFloat("moveSpeed", Mathf.Abs(rb.linearVelocity.x));
@@ -101,9 +103,13 @@ public class PlayerController : MonoBehaviour
                 print("isMoving");
                 break;
             case "Jump":
-                if (context.performed)
+                if (context.started)
                 { 
-                    HandleJump();
+                    HandleJumpStart();
+                }
+                else if (context.canceled)
+                {
+                    handleJumpRelease();
                 }
                 break;
             default:
@@ -111,23 +117,35 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-    void HandleJump()
+    void HandleJumpStart()
     {
         if (isGrounded)
-            Jump();
+        {
+            Jump(jumpForce);
+            isJumping = true;
             //AudioManager.instance()
-        
+        }
+
         else if (canDoubleJump)
         {
-            Jump();
+            Jump(jumpForce);
+            isJumping = true;
             canDoubleJump = false;
             //AudioManager.instance()
         }
     }
 
-    void Jump()
+    void handleJumpRelease()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        if (isJumping && rb.linearVelocityY > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y *jumpForceMultiplier);
+        }
+        isJumping = false;
+    }
+    void Jump(float force)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
     }
 
     public void KnockBack()
