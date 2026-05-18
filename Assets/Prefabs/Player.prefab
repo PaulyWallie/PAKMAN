@@ -104,13 +104,16 @@ GameObject:
   - component: {fileID: 167394827454013854}
   - component: {fileID: 167394827454013852}
   - component: {fileID: 608529715169620192}
-  - component: {fileID: 4743265037604010098}
   - component: {fileID: 8779431468013727805}
   - component: {fileID: 1078838613544413535}
   - component: {fileID: 2992483800394013545}
+  - component: {fileID: 4743265037604010098}
   - component: {fileID: 792053735327051931}
   - component: {fileID: 8911776102256791499}
   - component: {fileID: 2162765264925896445}
+  - component: {fileID: 2545812718230027205}
+  - component: {fileID: 3928796765289740657}
+  - component: {fileID: 2469805510702796568}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -280,29 +283,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.4, y: 2}
   m_Direction: 0
---- !u!114 &4743265037604010098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167394827454013843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937cf55515530074eaa6c9ab4106c4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  bounceForce: 15
-  jumpForce: 12
-  jumpForceMultiplier: 0
-  groundCheckPoint: {fileID: 167394826244874526}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  knockBackLength: 5
-  knockBackForce: 15
-  stopInput: 0
 --- !u!114 &8779431468013727805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +507,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4743265037604010098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167394827454013843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937cf55515530074eaa6c9ab4106c4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  bounceForce: 15
+  jumpForce: 12
+  jumpForceMultiplier: 0
+  groundCheckPoint: {fileID: 167394826244874526}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  knockBackLength: 5
+  knockBackForce: 5
+  stopInput: 0
 --- !u!114 &792053735327051931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,6 +568,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioHandler
   jumpSFX: {fileID: 0}
   hurtSFX: {fileID: 0}
+--- !u!114 &2545812718230027205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167394827454013843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878681296b6eb6a4386878d00562b252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 6
+  currentHealth: 0
+--- !u!114 &3928796765289740657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167394827454013843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6d855d04584b8ac3df489b4cb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageBuffer
+  invincibilityDuration: 1
+  flickerInterval: 0.1
+--- !u!114 &2469805510702796568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167394827454013843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36613888072aee3439bb71fad77146f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthController
 --- !u!1 &8563982869577302147
 GameObject:
   m_ObjectHideFlags: 0

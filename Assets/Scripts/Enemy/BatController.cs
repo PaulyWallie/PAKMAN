@@ -1,34 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BatController : MonoBehaviour
+/// <summary>
+/// Specific controller for Bats. Inherits patrol and chase logic from EnemyController.
+/// </summary>
+public class BatController : EnemyController
 {
-    public float moveSpeed;
-    private bool canMove;
-    private PlayerController thePlayer;
+    private bool hasDetectedPlayer;
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Update()
     {
-        thePlayer = FindAnyObjectByType<PlayerController>();
+        // Only move if player has been detected (was visible once)
+        if (!hasDetectedPlayer) return;
+
+        base.Update();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnBecameVisible()
     {
-        if (canMove)
+        hasDetectedPlayer = true;
+        // Default to ChasePlayer if no other mode is set
+        if (patrolMode == PatrolMode.None)
         {
-           transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, moveSpeed *Time.deltaTime);
+            patrolMode = PatrolMode.ChasePlayer;
         }
     }
-    void OnBecameVisible()
-    {
-        canMove = true;
-    }
 
-     void OnEnable()
+    protected override void OnEnable()
     {
-        canMove = false;
+        base.OnEnable();
+        hasDetectedPlayer = false;
     }
 }
+

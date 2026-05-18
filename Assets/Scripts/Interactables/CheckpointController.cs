@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class CheckpointController : MonoBehaviour
 
     private void Start()
     {
-        checkpoints = FindObjectsByType<Checkpoint>(FindObjectsSortMode.None);
+        checkpoints = Object.FindObjectsByType<Checkpoint>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         if (PlayerController.instance)
             spawnPoint = PlayerController.instance.transform.position;
         else

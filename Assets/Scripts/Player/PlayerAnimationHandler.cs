@@ -23,6 +23,6 @@ public class PlayerAnimationHandler : MonoBehaviour
 
     public void TriggerHurt()
     {
-        anim.SetTrigger("Hurt");
+        //anim.SetTrigger("Hurt");
     }
 }
