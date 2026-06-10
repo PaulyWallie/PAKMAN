@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi:schemaLocation="UnityEngine.UIElements ../../UIElementsSchema/UnityEngine.UIElements.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ui:Style src="Styles/PAKMAN_Styles.uss" />
+    <ui:VisualElement name="hudRoot" class="hud-root" picking-mode="Ignore">
+        <ui:VisualElement name="leftContainer" picking-mode="Ignore">
+            <ui:VisualElement class="hud-stat-container" picking-mode="Ignore">
+                <ui:Label name="coinLabel" text="Coins: 0" class="hud-label" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-stat-container" picking-mode="Ignore">
+                <ui:Label name="skullLabel" text="Skulls: 0" class="hud-label" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="rightContainer" picking-mode="Ignore">
+            <ui:VisualElement name="heartContainer" class="heart-container" picking-mode="Ignore">
+                <ui:VisualElement name="heart1" class="heart-icon" />
+                <ui:VisualElement name="heart2" class="heart-icon" />
+                <ui:VisualElement name="heart3" class="heart-icon" />
+            </ui:VisualElement>
+            <ui:Label name="livesLabel" text="Lives: 3" class="hud-label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

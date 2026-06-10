@@ -45,7 +45,10 @@ public class PauseScreen : MonoBehaviour
     {
         Time.timeScale = 0;
 
-        thePauseScreen.SetActive(true);
+        if (UITKController.instance != null)
+            UITKController.instance.ShowPauseMenu(true);
+        else
+            thePauseScreen.SetActive(true);
        // thePlayer.canMove = false;
         //AudioManager.current.PlayMenuMusic();
     }
@@ -54,7 +57,10 @@ public class PauseScreen : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        thePauseScreen.SetActive(false);
+        if (UITKController.instance != null)
+            UITKController.instance.ShowPauseMenu(false);
+        else
+            thePauseScreen.SetActive(false);
         //thePlayer.canMove = true;
         //AudioManager.current.PlayLevelMusic();
     }

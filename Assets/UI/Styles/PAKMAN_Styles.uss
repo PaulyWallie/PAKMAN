@@ -1,0 +1,89 @@
+/*
+2026-06-10 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #cccccc;
+    --accent-color: #ffcc00;
+    --font-size-large: 64px;
+    --font-size-medium: 32px;
+    --font-size-small: 24px;
+}
+
+.screen-root {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hud-root {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hud-stat-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hud-label {
+    color: var(--primary-color);
+    font-size: var(--font-size-medium);
+    -unity-font-style: bold;
+}
+
+.menu-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    align-items: center;
+    min-width: 400px;
+}
+
+.menu-title {
+    color: var(--accent-color);
+    font-size: var(--font-size-large);
+    -unity-font-style: bold;
+    margin-bottom: 30px;
+}
+
+.menu-button {
+    width: 300px;
+    height: 60px;
+    background-color: #333333;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: white;
+    font-size: var(--font-size-small);
+    margin-bottom: 15px;
+    transition-duration: 0.2s;
+}
+
+.menu-button:hover {
+    background-color: #555555;
+    scale: 1.05;
+}
+
+.menu-button:active {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+.heart-container {
+    flex-direction: row;
+}
+
+.heart-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background-image: url("project://database/Assets/Art/Sprites/Items/simple-items-Sheet.png");
+}

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi:schemaLocation="UnityEngine.UIElements ../../UIElementsSchema/UnityEngine.UIElements.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ui:Style src="Styles/PAKMAN_Styles.uss" />
+    <ui:VisualElement name="screenRoot" class="screen-root">
+        <ui:VisualElement name="menuContainer" class="menu-container">
+            <ui:Label name="title" text="GAME OVER" class="menu-title" />
+            <ui:Button name="restartButton" text="Restart" class="menu-button" />
+            <ui:Button name="levelSelectButton" text="Level Select" class="menu-button" />
+            <ui:Button name="quitButton" text="Main Menu" class="menu-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
