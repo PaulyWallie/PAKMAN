@@ -1,30 +1,47 @@
 using UnityEngine;
 
-/// <summary>
-/// Core controller for the Player. 
-/// Handles physics and high-level logic, delegating specialized tasks to other components.
-/// </summary>
+// < summary >
+// Core controller for the Player.
+// Handles movement, jumping, knockback, and stomp mechanics.
+// </summary>
 [RequireComponent(typeof(Rigidbody2D), typeof(PlayerInputHandler))]
 [RequireComponent(typeof(PlayerAnimationHandler), typeof(PlayerAudioHandler))]
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController instance;
+    public static PlayerController Instance;
 
-    [Header("Movement Settings")]
-    public float moveSpeed = 8f;
-    public float bounceForce = 10f;
-    
-    [Header("Jump Settings")]
-    public float jumpForce = 12f;
-    public float jumpForceMultiplier = 0.5f;
-    
-    [Header("Ground Check Settings")]
-    public Transform groundCheckPoint;
-    public LayerMask whatIsGround;
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed = 8f;
 
-    [Header("Knockback Settings")]
-    public float knockBackLength = 0.2f;
-    public float knockBackForce = 8f;
+    [Header("Jump")]
+    [SerializeField] private float jumpForce = 12f;
+    [SerializeField] private float bounceForce = 10f;
+
+    [Tooltip("Allows jumping shortly after leaving the ground.")]
+    [SerializeField] private float coyoteTime = 0.15f;
+
+    [Tooltip("Allows jump input shortly before landing.")]
+    [SerializeField] private float jumpBufferTime = 0.15f;
+
+    [Tooltip("Higher = faster falling.")]
+    [SerializeField] private float fallMultiplier = 2.5f;
+
+    [Tooltip("Higher = shorter jump when releasing early.")]
+    [SerializeField] private float lowJumpMultiplier = 2f;
+
+    [Header("Ground Check")]
+    [SerializeField] private Transform groundCheckPoint;
+    [SerializeField] private float groundRadius = 0.2f;
+    [SerializeField] private LayerMask whatIsGround;
+
+    [Header("Stomp")]
+    [SerializeField] private Vector2 stompBoxSize = new Vector2(.3f, .2f);
+    [SerializeField] private LayerMask enemyLayer;
+
+    [Header("Knockback")]
+    [SerializeField] private float knockBackLength = .2f;
+    [SerializeField] private float knockBackForce = 8f;
+
     public bool stopInput;
 
     private Rigidbody2D rb;
@@ -34,14 +51,18 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
 
     private bool isGrounded;
-    private bool isJumping;
     private bool canDoubleJump;
+
+    private float coyoteCounter;
+    private float jumpBufferCounter;
+
     private float knockBackCounter;
     private float knockBackDirection;
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
+
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInputHandler>();
         animHandler = GetComponent<PlayerAnimationHandler>();
@@ -51,120 +72,182 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        CheckGroundStatus();
+        CheckGround();
+
+        HandleJumpInput();
+
+        animHandler.UpdateAnimation(isGrounded);
+    }
+
+    private void FixedUpdate()
+    {
+        ApplyBetterGravity();
+
         CheckStomp();
 
-        if (knockBackCounter <= 0)
+        if (knockBackCounter > 0)
         {
-            HandleMovement();
-            HandleJump();
+            HandleKnockback();
         }
         else
         {
-            HandleKnockBack();
+            HandleMovement();
         }
-
-        animHandler.UpdateAnimation(isGrounded);
     }
 
     private void HandleMovement()
     {
         if (stopInput)
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
         }
 
-        Vector2 moveInput = input.MoveInput;
-        rb.linearVelocity = new Vector2(moveSpeed * moveInput.x, rb.linearVelocity.y);
+        Vector2 velocity = rb.linearVelocity;
+        velocity.x = input.MoveInput.x * moveSpeed;
+        rb.linearVelocity = velocity;
 
-        if (moveInput.x < 0) sr.flipX = true;
-        else if (moveInput.x > 0) sr.flipX = false;
+        if (input.MoveInput.x != 0)
+            sr.flipX = input.MoveInput.x < 0;
     }
 
-    private void HandleJump()
+    private void HandleJumpInput()
     {
-        if (stopInput) return;
+        if (stopInput)
+            return;
 
         if (input.JumpStarted)
+            jumpBufferCounter = jumpBufferTime;
+        else
+            jumpBufferCounter -= Time.deltaTime;
+
+        if (isGrounded)
+            coyoteCounter = coyoteTime;
+        else
+            coyoteCounter -= Time.deltaTime;
+
+        if (jumpBufferCounter > 0)
         {
-            if (isGrounded)
+            if (coyoteCounter > 0)
             {
-                PerformJump();
+                Jump();
+
+                jumpBufferCounter = 0;
+                coyoteCounter = 0;
             }
             else if (canDoubleJump)
             {
-                PerformJump();
-                canDoubleJump = false;
-            }
-        }
+                Jump();
 
-        if (input.JumpCanceled && isJumping && rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpForceMultiplier);
-            isJumping = false;
+                canDoubleJump = false;
+                jumpBufferCounter = 0;
+            }
         }
     }
 
-    private void PerformJump()
+    private void Jump()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        isJumping = true;
+        Vector2 velocity = rb.linearVelocity;
+        velocity.y = jumpForce;
+        rb.linearVelocity = velocity;
+
         audioHandler.PlayJump();
     }
 
-    private void CheckGroundStatus()
+    private void ApplyBetterGravity()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
-        if (isGrounded)
+        if (rb.linearVelocity.y < 0)
         {
-            canDoubleJump = true;
-            if (rb.linearVelocity.y <= 0) isJumping = false;
+            rb.linearVelocity += Vector2.up *
+                Physics2D.gravity.y *
+                (fallMultiplier - 1) *
+                Time.fixedDeltaTime;
         }
+        else if (rb.linearVelocity.y > 0 && input.JumpCanceled)
+        {
+            rb.linearVelocity += Vector2.up *
+                Physics2D.gravity.y *
+                (lowJumpMultiplier - 1) *
+                Time.fixedDeltaTime;
+        }
+    }
+
+    private void CheckGround()
+    {
+        isGrounded = Physics2D.OverlapCircle(
+            groundCheckPoint.position,
+            groundRadius,
+            whatIsGround);
+
+        if (isGrounded)
+            canDoubleJump = true;
     }
 
     private void CheckStomp()
     {
-        // Only stomp if falling
-        if (rb.linearVelocity.y < -1f)
+        if (rb.linearVelocity.y >= -1f)
+            return;
+
+        Collider2D[] hits = Physics2D.OverlapBoxAll(
+            groundCheckPoint.position,
+            stompBoxSize,
+            0f,
+            enemyLayer);
+
+        foreach (Collider2D hit in hits)
         {
-            Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(groundCheckPoint.position, new Vector2(0.3f, 0.2f), 0f);
-            foreach (var hit in hitEnemies)
+            if (hit.TryGetComponent(out EnemyController enemy))
             {
-                if (hit.CompareTag("Enemy"))
-                {
-                    EnemyController enemy = hit.GetComponent<EnemyController>();
-                    if (enemy != null)
-                    {
-                        enemy.TakeDamage(1);
-                        Bounce();
-                        break;
-                    }
-                }
+                enemy.TakeDamage(1);
+                Bounce();
+                break;
             }
         }
     }
 
-    private void HandleKnockBack()
+    private void HandleKnockback()
     {
-        knockBackCounter -= Time.deltaTime;
-        rb.linearVelocity = new Vector2(knockBackDirection * knockBackForce, rb.linearVelocity.y);
+        knockBackCounter -= Time.fixedDeltaTime;
+
+        rb.linearVelocity = new Vector2(
+            knockBackDirection * knockBackForce,
+            rb.linearVelocity.y);
+
+        animHandler.TriggerHurt();
     }
 
     public void KnockBack(Vector3 sourcePosition)
     {
         knockBackCounter = knockBackLength;
-        knockBackDirection = transform.position.x < sourcePosition.x ? -1f : 1f;
-        rb.linearVelocity = new Vector2(knockBackDirection * knockBackForce, knockBackForce);
-        
-        animHandler.TriggerHurt();
+
+        knockBackDirection =
+            transform.position.x < sourcePosition.x ? -1 : 1;
+
+        rb.linearVelocity = new Vector2(
+            knockBackDirection * knockBackForce,
+            knockBackForce);
+
         audioHandler.PlayHurt();
     }
 
     public void Bounce()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceForce);
-        audioHandler.PlayJump(); 
+        rb.linearVelocity = new Vector2(
+            rb.linearVelocity.x,
+            bounceForce);
+
+        audioHandler.PlayJump();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (groundCheckPoint == null)
+            return;
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(groundCheckPoint.position, groundRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(groundCheckPoint.position, stompBoxSize);
     }
 }
-

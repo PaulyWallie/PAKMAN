@@ -20,8 +20,8 @@ public class CheckpointController : MonoBehaviour
     private void Start()
     {
         checkpoints = Object.FindObjectsByType<Checkpoint>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        if (PlayerController.instance)
-            spawnPoint = PlayerController.instance.transform.position;
+        if (PlayerController.Instance)
+            spawnPoint = PlayerController.Instance.transform.position;
         else
             Debug.LogError("PlayerController instance is null");
     }

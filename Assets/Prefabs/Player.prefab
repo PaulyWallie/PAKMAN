@@ -527,8 +527,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockBackLength: 5
-  knockBackForce: 5
+  knockBackLength: 0.25
+  knockBackForce: 8
   stopInput: 0
 --- !u!114 &792053735327051931
 MonoBehaviour:

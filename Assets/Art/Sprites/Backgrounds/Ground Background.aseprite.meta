@@ -101,9 +101,7 @@ ScriptedImporter:
     addShadowCasters: 0
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
-  importFileNodeState: 1
   platformSettingsDirtyTick: 639166987030285854
-  textureAssetName: 
   singleSpriteImportData:
   - name: 
     originalName: 
@@ -159,7 +157,7 @@ ScriptedImporter:
       x: 4
       y: 268
       width: 256
-      height: 253
+      height: 150
     spriteID: e75098dfa0914e842bc4558f64e1d42b
     spriteBone: []
     spriteOutline: []
@@ -216,7 +214,7 @@ ScriptedImporter:
         x: 0
         y: 0
         width: 256
-        height: 253
+        height: 150
       spriteId: e75098dfa0914e842bc4558f64e1d42b
     linkedCells: []
     tileCells: []
@@ -250,6 +248,5 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
-  spritePackingTag: 
+  previousTextureSize: {x: 512, y: 512}
   canvasSize: {x: 256, y: 256}
-  previousTextureSize: {x: 512, y: 1024}

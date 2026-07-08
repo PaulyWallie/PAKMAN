@@ -38,7 +38,7 @@ public class DamagePlayer : MonoBehaviour
         else
         {
             PlayerHealthController.instance.TakeDamage(damageAmount);
-            PlayerController.instance.KnockBack(transform.position);
+            PlayerController.Instance.KnockBack(transform.position);
         }
     }
 }

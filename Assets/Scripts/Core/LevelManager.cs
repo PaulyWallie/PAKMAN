@@ -22,10 +22,10 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator RespawnCo()
     {
-        PlayerController.instance.gameObject.SetActive(false);
+        PlayerController.Instance.gameObject.SetActive(false);
         yield return new WaitForSeconds(waitToRespawn);
-        PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
-        PlayerController.instance.gameObject.SetActive(true);
+        PlayerController.Instance.transform.position = CheckpointController.instance.spawnPoint;
+        PlayerController.Instance.gameObject.SetActive(true);
     }
 
     public void EndLevel()
@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator EndLevelCo()
     {
-        PlayerController.instance.stopInput = true;
+        PlayerController.Instance.stopInput = true;
         // Logic for transitioning to result screen could go here
         yield return new WaitForSeconds(2f);
     }

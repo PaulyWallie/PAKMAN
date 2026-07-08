@@ -100,9 +100,9 @@ public class EnemyController : MonoBehaviour
 
     protected virtual void HandleChasePlayerPatrol()
     {
-        if (PlayerController.instance == null) return;
+        if (PlayerController.Instance == null) return;
 
-        Vector3 targetPos = PlayerController.instance.transform.position;
+        Vector3 targetPos = PlayerController.Instance.transform.position;
         Vector2 direction = (targetPos - transform.position).normalized;
         
         if (rb != null)
@@ -247,8 +247,8 @@ public class EnemyController : MonoBehaviour
         if (PlayerHealthController.instance != null)
             PlayerHealthController.instance.TakeDamage(contactDamage);
         
-        if (PlayerController.instance != null)
-            PlayerController.instance.KnockBack(transform.position);
+        if (PlayerController.Instance != null)
+            PlayerController.Instance.KnockBack(transform.position);
     }
 
     protected virtual void Die()
