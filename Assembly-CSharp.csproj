@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
     <Compile Include="Assets\Scripts\Core\LevelStats.cs" />
     <Compile Include="Assets\Scripts\UI\UITKController.cs" />
+    <Compile Include="Assets\Scripts\Environment\ParalaxLayer.cs" />
     <Compile Include="Assets\Scripts\Environment\LevelExit.cs" />
     <Compile Include="Assets\Scripts\UI\PauseScreen.cs" />
     <Compile Include="Assets\Scripts\Core\DamageBuffer.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Interactables\CheckpointController.cs" />
     <Compile Include="Assets\Scripts\Core\DamagePlayer.cs" />
-    <Compile Include="Assets\Scripts\Environment\HillMover.cs" />
     <Compile Include="Assets\Scripts\Environment\DestroyOverTime.cs" />
     <Compile Include="Assets\Scripts\Enemy\BatController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAudioHandler.cs" />
@@ -79,7 +79,6 @@
     <Compile Include="Assets\Scripts\Interactables\PickupType.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\Core\Health.cs" />
-    <Compile Include="Assets\Scripts\Environment\Paralax.cs" />
     <Compile Include="Assets\Scripts\UI\FadeIn.cs" />
     <Compile Include="Assets\Scripts\Environment\MovingObject.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealthController.cs" />
