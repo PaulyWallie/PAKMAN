@@ -1,40 +1,37 @@
+using System;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    [Header("Checkpoint Sprites")]
-    public SpriteRenderer sr;
-    public Sprite cpOn, cpOff;
+    // A static event that any script can subscribe to
+    public static event Action<Checkpoint> OnCheckpointActivated;
+
+    [Header("Visuals")]
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private Sprite activeSprite;
+    [SerializeField] private Sprite inactiveSprite;
+
+    private bool _isActive;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !_isActive)
         {
-            if (sr.sprite != cpOn)
-            {
-                CheckpointController.instance.DeactivateCheckpoints();
-                ActivateCheckpoint();
-                CheckpointController.instance.SetSpawnPoint(transform.position);
-                if (AudioManager.instance != null) AudioManager.instance.PlaySFX(SoundType.Powerup);
-            }
+            Activate();
         }
-        else
-            Debug.LogError("CheckpointController not found");
     }
 
-    public void ResetCheckpoint()
+    public void Activate()
     {
-        if(sr)
-            sr.sprite = cpOff;
-        else
-            Debug.LogError("SpriteRenderer not found");
+        _isActive = true;
+        sr.sprite = activeSprite;
+        // Notify the system that THIS checkpoint is now the active one
+        OnCheckpointActivated?.Invoke(this);
     }
 
-    public void ActivateCheckpoint()
+    public void Deactivate()
     {
-        if (sr)
-            sr.sprite = cpOn;
-        else
-            Debug.LogError("SpriteRenderer not found");
+        _isActive = false;
+        sr.sprite = inactiveSprite;
     }
 }

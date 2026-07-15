@@ -2,44 +2,32 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    public static CheckpointController instance;
-    [Header("Checkpoint Settings")] Checkpoint[] checkpoints;
-    public Vector2 spawnPoint;
+    public static CheckpointController Instance { get; private set; }
+
+    public Vector3 CurrentSpawnPoint { get; private set; }
+    private Checkpoint _activeCheckpoint;
 
     private void Awake()
     {
-        if (instance)
-            instance = this;
-        else if (instance != this)
+        if (Instance == null)
+            Instance = this;
+        else Destroy(gameObject);
+    }
+
+    private void OnEnable() => Checkpoint.OnCheckpointActivated += HandleCheckpointActivated;
+    private void OnDisable() => Checkpoint.OnCheckpointActivated -= HandleCheckpointActivated;
+
+    private void HandleCheckpointActivated(Checkpoint newCheckpoint)
+    {
+        // Deactivate the old one if it exists
+        if (_activeCheckpoint != null && _activeCheckpoint != newCheckpoint)
         {
-            //Debug.LogWarning("There must be one instance of CheckpointController");
-            Destroy(gameObject);
+            _activeCheckpoint.Deactivate();
         }
-    }
 
-    private void Start()
-    {
-        checkpoints = Object.FindObjectsByType<Checkpoint>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        if (PlayerController.Instance)
-            spawnPoint = PlayerController.Instance.transform.position;
-        else
-            Debug.LogError("PlayerController instance is null");
-    }
+        _activeCheckpoint = newCheckpoint;
+        CurrentSpawnPoint = newCheckpoint.transform.position;
 
-    public void DeactivateCheckpoints()
-    {
-        if (checkpoints.Length > 0)
-        {
-            foreach (Checkpoint checkpoint in checkpoints)
-                checkpoint.ResetCheckpoint();
-        }
-        else
-            Debug.LogError("There are no checkpoints to deactivate");
-    }
-
-    public void SetSpawnPoint(Vector2 newSpawnPoint)
-    {
-        spawnPoint = newSpawnPoint;
-        Debug.Log($"spawn pont updated to {spawnPoint}");
+        Debug.Log($"Spawn Point updated to: {CurrentSpawnPoint}");
     }
 }
