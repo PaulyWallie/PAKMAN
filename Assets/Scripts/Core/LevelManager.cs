@@ -1,18 +1,19 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Responsible ONLY for managing high-level level flow (Respawning, Ending).
 /// </summary>
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager instance;
+    public static LevelManager Instance;
 
     public float waitToRespawn = 2f;
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     public void RespawnPlayer()
@@ -38,6 +39,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.Instance.stopInput = true;
         // Logic for transitioning to result screen could go here
         yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
 

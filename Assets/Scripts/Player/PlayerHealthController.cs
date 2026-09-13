@@ -45,7 +45,7 @@ public class PlayerHealthController : MonoBehaviour
 
     private void HandleDeath()
     {
-        LevelManager.instance.RespawnPlayer();
+        LevelManager.Instance.RespawnPlayer();
         health.Heal(health.maxHealth);
     }
 

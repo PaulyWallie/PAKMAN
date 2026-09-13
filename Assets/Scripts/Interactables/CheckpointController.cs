@@ -14,6 +14,14 @@ public class CheckpointController : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        if (PlayerController.Instance != null)    
+        {
+            CurrentSpawnPoint = PlayerController.Instance.transform.position;
+        }
+    }
+
     private void OnEnable() => Checkpoint.OnCheckpointActivated += HandleCheckpointActivated;
     private void OnDisable() => Checkpoint.OnCheckpointActivated -= HandleCheckpointActivated;
 

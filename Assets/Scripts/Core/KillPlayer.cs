@@ -8,7 +8,7 @@ public class KillPlayer : MonoBehaviour
     {
         if (other.tag =="Player")
         {
-            LevelManager.instance.RespawnPlayer();
+            LevelManager.Instance.RespawnPlayer();
         }
     }
 }

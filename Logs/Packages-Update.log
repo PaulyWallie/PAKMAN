@@ -88,3 +88,23 @@ The following packages were updated:
   com.unity.ugui from version 2.0.0 to 2.5.0
 The following packages were removed:
   com.unity.modules.vr@1.0.0
+
+=== Wed Sep  9 11:15:58 2026
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.modules.tetgen@1.0.0
+The following packages were updated:
+  com.unity.2d.animation from version 15.1.0 to 16.0.0
+  com.unity.2d.aseprite from version 5.0.3 to 6.0.0
+  com.unity.cinemachine from version 3.1.7 to 6.6.0
+  com.unity.collab-proxy from version 2.12.4 to 2.13.6
+  com.unity.inputsystem from version 1.19.0 to 1.20.0
+  com.unity.multiplayer.center from version 1.0.1 to 2.0.1
+  com.unity.render-pipelines.universal from version 17.5.0 to 17.6.0
+  com.unity.test-framework from version 1.7.0 to 1.8.0
+  com.unity.timeline from version 1.8.12 to 6.6.0
+  com.unity.ugui from version 2.5.0 to 2.6.0
+  com.unity.visualscripting from version 1.9.11 to 1.9.12

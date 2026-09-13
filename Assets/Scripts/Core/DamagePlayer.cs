@@ -33,7 +33,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (killInstantly)
         {
-            LevelManager.instance.RespawnPlayer();
+            LevelManager.Instance.RespawnPlayer();
         }
         else
         {
