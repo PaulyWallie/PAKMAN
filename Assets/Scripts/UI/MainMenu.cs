@@ -33,15 +33,8 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
+        GameSaveReset.StartNewGame(levelNames);
         SceneManager.LoadScene(firstLevel);
-
-        for (int i = 0; i < levelNames.Length; i++)
-        {
-            PlayerPrefs.SetInt(levelNames[i], 0);
-        }
-
-        PlayerPrefs.SetInt("CoinCount", 0);
-        PlayerPrefs.SetInt("PlayerLives", startingLives);
         //AudioManager.current.PlayLevelMusic();
     }
 

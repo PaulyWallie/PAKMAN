@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
                 jumpBufferCounter = 0;
                 coyoteCounter = 0;
             }
-            else if (canDoubleJump)
+            else if (canDoubleJump && PlayerProgress.DoubleJumpUnlocked)
             {
                 Jump();
 
